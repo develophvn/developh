@@ -13,15 +13,19 @@
   "scripts": {
     "dev": "frontity dev",
     "build": "frontity build",
-    "serve": "frontity serve"
+    "serve": "frontity serve",
+    "frontity": "frontity"
   },
   "prettier": {},
   "dependencies": {
-    "frontity": "^1.14.1",
     "@frontity/core": "^1.10.1",
-    "@frontity/wp-source": "^1.11.1",
-    "@frontity/tiny-router": "^1.3.2",
     "@frontity/html2react": "^1.6.1",
-    "@frontity/mars-theme": "./packages/mars-theme"
-  }
+    "@frontity/mars-theme": "./packages/mars-theme",
+    "@frontity/tiny-router": "^1.3.2",
+    "@frontity/wp-source": "^1.11.1",
+    "developh-theme": "file:packages/developh-theme",
+    "frontity": "^1.14.1",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {}
 }

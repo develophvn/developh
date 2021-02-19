@@ -2,21 +2,17 @@ const settings = {
   name: "ui",
   state: {
     frontity: {
-      url: "https://developh.wordpress.com",
-      title: "Test Developh Blog",
-      description: "WordPress installation for Developh development",
+      url: "https://develophvn.tech",
+      title: "Developh Vietnam",
+      description: "Building the best developers",
     },
   },
   packages: [
     {
-      name: "@frontity/mars-theme",
+      name: "developh-theme",
       state: {
         theme: {
-          menu: [["Home", "/"]],
-          featured: {
-            showOnList: false,
-            showOnPost: false,
-          },
+          menu: [],
         },
       },
     },
@@ -24,7 +20,9 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://developh.wordpress.com",
+          api: "http://develophvn.org/wp-json",
+          homepage: "/home/",
+          postsPage: "/blogs/",
         },
       },
     },
