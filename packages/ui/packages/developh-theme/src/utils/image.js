@@ -36,11 +36,6 @@ const image = {
 export default image;
 
 const Container = styled.span`
-  display: block;
-  position: relative;
-  padding-bottom: ${({ height, width }) =>
-    (parseInt(height, 10) / parseInt(width, 10)) * 100}%;
-
   noscript > img {
     position: absolute;
     height: 100%;

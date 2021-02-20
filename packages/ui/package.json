@@ -25,6 +25,7 @@
     "@frontity/wp-source": "^1.11.1",
     "bootstrap": "^4.6.0",
     "developh-theme": "file:packages/developh-theme",
+    "dotenv": "^8.2.0",
     "frontity": "^1.14.1",
     "lodash": "^4.17.20",
     "twin.macro": "^2.2.3"

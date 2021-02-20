@@ -1,3 +1,7 @@
+import { config } from "dotenv";
+
+config();
+
 const settings = {
   name: "ui",
   state: {
@@ -11,6 +15,9 @@ const settings = {
     {
       name: "developh-theme",
       state: {
+        env: {
+          IFRAME_URL: process.env.IFRAME_URL || "http://localhost:3005",
+        },
         theme: {
           menu: [
             ["Home", "/"],
