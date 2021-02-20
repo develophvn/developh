@@ -1,5 +1,4 @@
 import { connect, Global, css } from "frontity";
-import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 import DefaultTheme from "./containers/Default";
@@ -12,7 +11,8 @@ import PostAndPagesCss from "./static/assets/styles/post-and-pages.min.css";
 import AdminIconCss from "./static/assets/styles/admin-icon.css";
 import WpBlockCss from "./static/assets/styles/wp-block-library.css";
 
-import HomeTheme from "./containers/Home";
+import image from "./utils/image";
+// import HomeTheme from "./containers/Home";
 
 const App = ({ state }) => {
   // if (state.router.link === "/") {

@@ -24,7 +24,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          api: "http://develophvn.org/wp-json",
+          api: "https://develophvn.org/wp-json",
           homepage: "/home/",
           postsPage: "/blogs/",
         },
