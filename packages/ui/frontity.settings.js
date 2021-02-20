@@ -12,7 +12,11 @@ const settings = {
       name: "developh-theme",
       state: {
         theme: {
-          menu: [],
+          menu: [
+            ["Home", "/"],
+            ["Blogs", "/blogs/"],
+            ["About Us", "/about-us/"],
+          ],
         },
       },
     },

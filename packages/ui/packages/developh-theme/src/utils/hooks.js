@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { get } from "lodash";
 
 export const useGetContent = (contentPath, state) => {
@@ -25,4 +25,11 @@ export const useGetContent = (contentPath, state) => {
   }, [state, contentPath]);
 
   return { content, loading };
+};
+
+export const useWindow = () => {
+  if (typeof window === "undefined") {
+    return {};
+  }
+  return window;
 };

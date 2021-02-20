@@ -23,9 +23,11 @@
     "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.3.2",
     "@frontity/wp-source": "^1.11.1",
+    "bootstrap": "^4.6.0",
     "developh-theme": "file:packages/developh-theme",
     "frontity": "^1.14.1",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "twin.macro": "^2.2.3"
   },
   "devDependencies": {}
 }

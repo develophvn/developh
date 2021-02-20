@@ -1,61 +1,43 @@
-import React from "react";
-import { connect, styled } from "frontity";
+import { connect, Global, css } from "frontity";
 import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
-import { get } from "lodash";
-import { useGetContent } from "./utils/hooks";
-import { NavbarIconUrl } from "./static/constants";
+import DefaultTheme from "./containers/Default";
+import AnimateCss from "./static/assets/styles/animate.min.css";
+import ComponentsCss from "./static/assets/styles/components.min.css";
+import CustomStylesCss from "./static/assets/styles/custom-styles.css";
+import EditorFeCss from "./static/assets/styles/editor-fe.min.css";
+import FontAwesomeCss from "./static/assets/styles/font-awesome.min.css";
+import PostAndPagesCss from "./static/assets/styles/post-and-pages.min.css";
+import AdminIconCss from "./static/assets/styles/admin-icon.css";
+import WpBlockCss from "./static/assets/styles/wp-block-library.css";
 
-const StyledApp = styled.div`
-  width: 100vw;
-`;
-
-const StyledLandingBox = styled.div`
-  width: 60%;
-  text-align: center;
-  margin: 0 auto;
-
-  padding: 0.5rem;
-  border-bottom: 2px solid black;
-`;
-
-const MainLogo = styled.img`
-  height: 50px;
-`;
-
-const LandingBox = ({ frontityState }) => (
-  <StyledLandingBox>
-    <MainLogo src={NavbarIconUrl} alt="logo" />
-    <h1>{get(frontityState, "title")}</h1>
-    <h3>{get(frontityState, "description")}</h3>
-  </StyledLandingBox>
-);
+import HomeTheme from "./containers/Home";
 
 const App = ({ state }) => {
-  const { content } = useGetContent(state.router.link, state);
-
-  console.log(content, state);
+  // if (state.router.link === "/") {
+  //   return <HomeTheme />;
+  // }
 
   return (
-    <StyledApp>
-      <LandingBox frontityState={get(state, "frontity")} />
-      <h2>{get(content, "page.title.rendered")}</h2>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: get(content, "page.content.rendered"),
-        }}
-      />
-    </StyledApp>
+    <>
+      <Global styles={css(PostAndPagesCss)} />
+      <Global styles={css(AnimateCss)} />
+      <Global styles={css(ComponentsCss)} />
+      <Global styles={css(CustomStylesCss)} />
+      <Global styles={css(EditorFeCss)} />
+      <Global styles={css(FontAwesomeCss)} />
+      <Global styles={css(AdminIconCss)} />
+      <Global styles={css(WpBlockCss)} />
+      <DefaultTheme />
+    </>
   );
 };
-
-const Root = connect(App);
 
 export default {
   name: "developh-theme",
   roots: {
-    theme: Root,
+    theme: connect(App),
   },
   state: {
     /**
