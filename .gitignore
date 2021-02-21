@@ -40,3 +40,5 @@ amplifyconfiguration.json
 amplify-gradle-config.json
 amplifyxc.config
 .eslintcache
+# Local Netlify folder
+.netlify

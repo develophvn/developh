@@ -30,7 +30,6 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-manifest",
@@ -60,5 +59,7 @@ module.exports = {
     "gatsby-plugin-layout",
     "gatsby-plugin-lodash",
     "gatsby-plugin-fontawesome-css",
+    "gatsby-plugin-netlify",
   ],
 };
+s;

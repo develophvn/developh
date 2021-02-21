@@ -1,5 +1,6 @@
 import * as React from "react";
 import { get } from "lodash";
+import { graphql } from "gatsby";
 import { Avatar } from "baseui/avatar";
 import { useStyletron, expandBorderStyles } from "baseui/styles";
 import { Display2, H6, Label1 } from "baseui/typography";
