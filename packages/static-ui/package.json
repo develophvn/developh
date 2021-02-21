@@ -1,0 +1,59 @@
+{
+  "name": "static-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "static-ui",
+  "author": "Dat Do",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "baseui": "^9.110.0",
+    "baseweb": "^3.0.7",
+    "gatsby": "^2.32.3",
+    "gatsby-image": "^2.11.0",
+    "gatsby-plugin-fontawesome-css": "^1.0.0",
+    "gatsby-plugin-google-analytics": "^2.11.0",
+    "gatsby-plugin-layout": "^1.10.0",
+    "gatsby-plugin-lodash": "^3.10.0",
+    "gatsby-plugin-manifest": "^2.12.0",
+    "gatsby-plugin-mdx": "^1.10.0",
+    "gatsby-plugin-offline": "^3.10.1",
+    "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-plugin-sharp": "^2.14.1",
+    "gatsby-plugin-sitemap": "^2.12.0",
+    "gatsby-plugin-styletron": "^5.7.0",
+    "gatsby-source-filesystem": "^2.11.0",
+    "gatsby-source-wordpress": "^4.0.1",
+    "gatsby-transformer-remark": "^2.16.0",
+    "gatsby-transformer-sharp": "^2.12.0",
+    "html2react": "^1.2.1",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-use": "^17.1.1",
+    "styletron-engine-atomic": "^1.4.7",
+    "styletron-react": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-baseui": "^9.110.0"
+  }
+}
