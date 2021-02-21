@@ -27,7 +27,10 @@
     "developh-theme": "file:packages/developh-theme",
     "dotenv": "^8.2.0",
     "frontity": "^1.14.1",
+    "gatsby-plugin-styletron": "^5.7.0",
     "lodash": "^4.17.20",
+    "styletron-engine-atomic": "^1.4.7",
+    "styletron-react": "^6.0.0",
     "twin.macro": "^2.2.3"
   },
   "devDependencies": {}
