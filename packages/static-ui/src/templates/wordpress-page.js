@@ -16,7 +16,6 @@ export default function WordpressPage({
     wpPage: { title, content, id },
   },
 }) {
-  console.log(title, content, id);
   return (
     <WordpressPageWrapper>
       <Helmet title={title} defer={false} />

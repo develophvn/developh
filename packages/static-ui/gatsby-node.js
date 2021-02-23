@@ -1,3 +1,5 @@
+const languages = require("./src/languages");
+
 const createWordPressPost = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
@@ -17,7 +19,6 @@ const createWordPressPost = async ({ actions, graphql, reporter }) => {
 
   // Define the template to use
   const postTemplate = require.resolve(`./src/templates/wordpress-post.js`);
-
   if (allWpPost.nodes.length) {
     allWpPost.nodes.map((post) => {
       actions.createPage({
@@ -53,10 +54,14 @@ const createWordPressPage = async ({ actions, graphql, reporter }) => {
 
   if (allWpPage.nodes.length) {
     allWpPage.nodes.map((post) => {
+      const currentLang = languages.langs.find((lang) =>
+        post.uri.includes(`/${lang}-`)
+      );
       actions.createPage({
         // It's best practice to use the uri field from WPGraphQL nodes when
         // building
-        path: post.uri,
+        // special logic for vietnamese post
+        path: currentLang ? `/${currentLang}${post.uri}` : post.uri,
         component: pageTemplate,
         context: post,
       });

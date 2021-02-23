@@ -1,6 +1,9 @@
+const languages = require("./src/languages");
+
 module.exports = {
   siteMetadata: {
     title: "Developh Vietnam",
+    languages,
   },
   plugins: [
     {
@@ -55,6 +58,15 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyForNull: "any",
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: true,
+        prefixDefault: false,
+      },
     },
     "gatsby-plugin-layout",
     "gatsby-plugin-lodash",

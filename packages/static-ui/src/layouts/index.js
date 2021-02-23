@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Provider as StyletronProvider } from "styletron-react";
 import { DarkTheme, BaseProvider, styled } from "baseui";
+import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
+import { isEmpty } from "lodash";
+
+import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n";
+import { IntlProvider } from "react-intl";
+import "intl";
+import "@formatjs/intl-relativetimeformat/polyfill";
+import "@formatjs/intl-pluralrules/polyfill";
+
 import Theme from "../styles/theme";
 
 import NavBar from "../components/navbar";
@@ -45,14 +54,59 @@ const useStyletronEngine = () => {
   return { engine };
 };
 
+const loadLocaleData = async (code) => {
+  if (!code) {
+    return { messages: {} };
+  }
+  const messages = await import(`../languages/${code}`);
+  await import(`@formatjs/intl-pluralrules/locale-data/${code}`);
+  await import(`@formatjs/intl-relativetimeformat/locale-data/${code}`);
+  await import(`intl/locale-data/jsonp/${code}`);
+
+  return { messages };
+};
+
 export default function Layout({ children }) {
   const { engine } = useStyletronEngine();
+  const [intlData, setIntlData] = useState({ messages: {} });
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      site {
+        siteMetadata {
+          languages {
+            defaultLangKey
+            langs
+          }
+        }
+      }
+    }
+  `);
+  // eslint-disable-next-line
+  const url = location.pathname;
+  const { langs, defaultLangKey } = data.site.siteMetadata.languages;
+  const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+  const homeLink = `/${langKey}/`.replace(`/${defaultLangKey}/`, "/");
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(
+    (item) => ({
+      ...item,
+      link: item.link.replace(`/${defaultLangKey}/`, "/"),
+      isDefault: item.langKey === defaultLangKey,
+    })
+  );
+  useEffect(() => {
+    if (langKey) {
+      loadLocaleData(langKey).then((result) => {
+        setIntlData(result);
+      });
+    }
+  }, [langKey]);
 
-  if (!engine) return null;
+  if (!engine || isEmpty(intlData.messages)) return null;
   return (
-    <LayoutContext.Provider>
-      <StyletronProvider value={engine}>
-        <style>{`
+    <IntlProvider locale={langKey} messages={intlData.messages}>
+      <LayoutContext.Provider>
+        <StyletronProvider value={engine}>
+          <style>{`
           @font-face {
             font-family: "Circular Std";
             src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2");
@@ -62,14 +116,15 @@ export default function Layout({ children }) {
             padding: 0px;
           }
         `}</style>
-        <BaseProvider theme={Themes.Default}>
-          <Helmet title={WEBSITE_INFO.title} defer={false} />
-          <StyledApp>
-            <NavBar />
-            <Content>{children}</Content>
-          </StyledApp>
-        </BaseProvider>
-      </StyletronProvider>
-    </LayoutContext.Provider>
+          <BaseProvider theme={Themes.Default}>
+            <Helmet title={WEBSITE_INFO.title} defer={false} />
+            <StyledApp>
+              <NavBar langsMenu={langsMenu} />
+              <Content>{children}</Content>
+            </StyledApp>
+          </BaseProvider>
+        </StyletronProvider>
+      </LayoutContext.Provider>
+    </IntlProvider>
   );
 }
