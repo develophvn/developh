@@ -2,10 +2,9 @@ import React, { useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import { get, isEmpty, cloneDeep } from "lodash";
 import { useStyletron } from "styletron-react";
-import { useWindowScroll } from "react-use";
 import { useStaticQuery, graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { ChevronDown, Delete } from "baseui/icon";
 import { FormattedMessage } from "react-intl";
 
@@ -62,7 +61,6 @@ const NavBar = ({ title, langsMenu }) => {
   `);
   const morePages = useMemo(() => get(data, "allWpPage.nodes", []), [data]);
   const [css] = useStyletron();
-  const { y } = useWindowScroll();
   const url = typeof window !== "undefined" ? window.location.pathname : "";
   const currentLang = useMemo(() => langsMenu.find((item) => item.selected), [
     langsMenu,
@@ -97,7 +95,7 @@ const NavBar = ({ title, langsMenu }) => {
           .filter((item) => !item.selected)
           .map((item) => ({
             ...item,
-            icon: () => <FontAwesomeIcon icon={faLink} />,
+            icon: () => <FontAwesomeIcon icon={faLanguage} />,
             label: (LanguageMap[item.langKey] || LanguageMap.default).label,
             route: item.link,
             isLanguageChange: true,
@@ -128,10 +126,9 @@ const NavBar = ({ title, langsMenu }) => {
     }
   }, [url, currentLang]);
 
-  if (!isEmpty(morePages) && mainItems.length === 1) {
+  if (mainItems.length < morePages.length + langsMenu.length - 1) {
     return null;
   }
-
   return (
     <AppNavBar
       overrides={{
@@ -140,17 +137,6 @@ const NavBar = ({ title, langsMenu }) => {
             position: "fixed",
             top: 0,
             zIndex: 2,
-            ...(y === 0 && url && url === "/"
-              ? { backgroundColor: "transparent" }
-              : {}),
-          },
-        },
-        MainMenuItem: {
-          style: {
-            color: y === 0 && url && url === "/" ? "white" : "#",
-            ":hover": {
-              color: y === 0 && url && url === "/" ? "grey" : "inherit",
-            },
           },
         },
         MobileDrawer: {
@@ -169,7 +155,6 @@ const NavBar = ({ title, langsMenu }) => {
       title={
         <Link
           className={css({
-            color: y === 0 && url && url === "/" ? "white" : "inherit",
             textDecoration: "none",
           })}
           to={

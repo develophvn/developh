@@ -20,14 +20,15 @@ const Centered = styled("div", {
 });
 
 const LeftAlignCard = styled("div", {
-  width: "360px",
+  width: "250px",
   height: "200px",
   textAlign: "left",
   borderColor: "transparent",
+  margin: "0 auto",
 });
 
 const CenterAlignCard = styled("div", {
-  width: "360px",
+  width: "250px",
   height: "200px",
   textAlign: "center",
   borderColor: "transparent",
@@ -137,7 +138,7 @@ const IndexPage = () => {
         <div className={css({ margin: "25px auto" })}>
           <Grid>
             {DevelophOffer.map((item) => (
-              <Cell key={item.title} span={[3, 3, 4]}>
+              <Cell key={item.title} span={[12, 4, 4]}>
                 <LeftAlignCard>
                   <Label2 color="#130E56">{item.title}</Label2>
                   <Paragraph2>{item.description}</Paragraph2>
@@ -151,9 +152,10 @@ const IndexPage = () => {
       </div>
       <div
         className={css({
-          height: "100vh",
+          minHeight: "100vh",
           backgroundColor: "#B7A0FF",
           paddingTop: "12rem",
+          paddingBottom: "12rem",
         })}
       >
         <Display2 color="white" maxWidth="800px" margin="0 auto">
@@ -163,7 +165,7 @@ const IndexPage = () => {
         <div className={css({ margin: "0 auto" })}>
           <Grid>
             {AboutUs.map((item) => (
-              <Cell key={item.title} span={6}>
+              <Cell key={item.title} span={[12, 12, 6]}>
                 <CenterAlignCard>
                   <Label1 color="white">{item.title}</Label1>
                   <Paragraph1 color="grey">{item.description}</Paragraph1>
@@ -176,12 +178,24 @@ const IndexPage = () => {
           Join us in creating a brighter future for the people, the technology,
           and the world.
         </H6>
-        <div className={css({ margin: "0 auto" })}>
+        <div
+          className={css({
+            margin: "0 auto",
+            width: "100%",
+          })}
+        >
           <Grid>
             {Contacts.map((item) => (
-              <Cell key={item.title} span={[1, 2, 3]}>
+              <Cell key={item.title} span={[12, 3, 3]}>
                 <Button
                   $as="a"
+                  overrides={{
+                    Root: {
+                      style: {
+                        marginTop: "12px",
+                      },
+                    },
+                  }}
                   shape={SHAPE.pill}
                   startEnhancer={() => <FontAwesomeIcon icon={item.icon} />}
                   href={item.link}

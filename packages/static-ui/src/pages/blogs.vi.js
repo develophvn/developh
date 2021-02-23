@@ -115,7 +115,7 @@ const BlogPage = ({
                     BaseButton: { style: { width: "100%" } },
                   }}
                 >
-                  Details
+                  Chi tiết
                 </Button>
               </StyledAction>
             </Card>
