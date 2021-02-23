@@ -82,7 +82,7 @@ export default function Layout({ children }) {
     }
   `);
   // eslint-disable-next-line
-  const url = location.pathname;
+  const url = typeof location !== "undefined" ? location.pathname : "/";
   const { langs, defaultLangKey } = data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
   const homeLink = `/${langKey}/`.replace(`/${defaultLangKey}/`, "/");
