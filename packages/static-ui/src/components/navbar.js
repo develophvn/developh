@@ -126,7 +126,7 @@ const NavBar = ({ title, langsMenu }) => {
     }
   }, [url, currentLang]);
 
-  if (mainItems.length < morePages.length + langsMenu.length - 1) {
+  if (mainItems.length === defaultMainItems.length) {
     return null;
   }
   return (

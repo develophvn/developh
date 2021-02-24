@@ -109,7 +109,7 @@ export default function Layout({ children }) {
           <style>{`
           @font-face {
             font-family: "Circular Std";
-            src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2");
+            src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2");
           }
           body {
             margin: 0px;
