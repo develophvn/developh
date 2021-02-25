@@ -11,7 +11,7 @@ import { Block } from "baseui/block";
 
 import FullScreenWrapper from "../../components/fullscreenwrapper";
 import Card from "../../components/card";
-import UsersBubble from "../../components/UsersBubble";
+import UsersBubble from "../../components/usersbubble";
 
 const Contacts = [
   {
