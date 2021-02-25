@@ -106,16 +106,6 @@ export default function Layout({ children }) {
     <IntlProvider locale={langKey} messages={intlData.messages}>
       <LayoutContext.Provider>
         <StyletronProvider value={engine}>
-          <style>{`
-          @font-face {
-            font-family: "Circular Std";
-            src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2");
-          }
-          body {
-            margin: 0px;
-            padding: 0px;
-          }
-        `}</style>
           <BaseProvider theme={Themes.Default}>
             <Helmet title={WEBSITE_INFO.title} defer={false} />
             <StyledApp>

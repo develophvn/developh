@@ -3,6 +3,16 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 @font-face {
+  font-family: "Circular Std";
+  src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2")
+    format("woff2");
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
   font-family: "FontAwesome";
   font-weight: normal;
   font-style: normal;

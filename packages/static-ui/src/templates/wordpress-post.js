@@ -2,8 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import { styled } from "baseui";
-import { H1 } from "baseui/typography";
+import { H1, Paragraph1 } from "baseui/typography";
 import HTML2React from "html2react";
+import BlogContentWrapper from "../components/blogcontentwrapper";
 
 const WordpressPostWrapper = styled("div", {
   paddingTop: "5rem",
@@ -17,14 +18,19 @@ const WordpressPostWrapper = styled("div", {
 
 export default function WordpressPost({
   data: {
-    wpPost: { title, content, id },
+    wpPost: { title, content },
   },
 }) {
+  console.log(content);
   return (
     <WordpressPostWrapper>
       <Helmet title={title} defer={false} />
-      <H1>{title}</H1>
-      {HTML2React(content)}
+      <BlogContentWrapper>
+        <H1>{title}</H1>
+        {HTML2React(content, {
+          p: Paragraph1,
+        })}
+      </BlogContentWrapper>
     </WordpressPostWrapper>
   );
 }

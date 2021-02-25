@@ -34,22 +34,9 @@ const DevelophOffer = [
   },
 ];
 
-const AboutInfo = [
-  {
-    title: "Về sứ mệnh",
-    description:
-      "We aim to inspire the youth to master technology skills in our inclusive education platform and together tackle real-world issues.",
-  },
-  {
-    title: "Về Team",
-    description:
-      "At Developh Vietnam, our team bonds as teammates and friends. Together, we create magic and keep the organization on track.",
-  },
-];
-
 // markup
 const IndexPage = () => {
-  return <Home aboutInfo={AboutInfo} offers={DevelophOffer} />;
+  return <Home offers={DevelophOffer} />;
 };
 
 export default IndexPage;
