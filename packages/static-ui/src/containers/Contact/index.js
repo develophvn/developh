@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
-import { Display2, H6, Label1, Paragraph1 } from "baseui/typography";
+import { Display2, Display3, H6, Label1, Paragraph1 } from "baseui/typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faSlack } from "@fortawesome/free-brands-svg-icons";
@@ -86,6 +86,7 @@ export default function Contact({ aboutInfo, users }) {
               maxWidth: "400px",
               marginLeft: "auto",
               marginRight: "auto",
+              marginBottom: "12px",
             },
           },
           Body: {
@@ -105,6 +106,9 @@ export default function Contact({ aboutInfo, users }) {
           </Grid>
         </StyledBody>
       </BaseCard>
+      <Display3 color="white">
+        <FormattedMessage id="leaderSectionTitle" />
+      </Display3>
       <UsersBubble users={users} />
     </FullScreenWrapper>
   );

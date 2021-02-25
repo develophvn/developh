@@ -4,7 +4,7 @@ import { useStyletron } from "baseui";
 import { Block } from "baseui/block";
 import { StatefulTooltip, TRIGGER_TYPE, PLACEMENT } from "baseui/tooltip";
 import { get } from "lodash";
-import { Label1, Label2, Paragraph1 } from "baseui/typography";
+import { Label1, Label2, Paragraph4 } from "baseui/typography";
 
 const Options = {
   size: 200,
@@ -28,16 +28,17 @@ export default function UsersBubble({ users }) {
       options={Options}
       className={css({
         width: "100%",
-        maxWidth: "1000px",
-        height: "500px",
+        maxWidth: "1500px",
+        height: "700px",
         borderRadius: "50px",
         marginLeft: "auto",
         marginRight: "auto",
+        paddingBottom: "400px",
       })}
     >
       {users.map((item) => (
         <StatefulTooltip
-          placement={PLACEMENT.top}
+          placement={PLACEMENT.auto}
           triggerType={TRIGGER_TYPE.hover}
           overrides={{
             Inner: {
@@ -47,7 +48,7 @@ export default function UsersBubble({ users }) {
             },
           }}
           content={() => (
-            <Block padding={"20px"}>
+            <Block padding={"20px"} maxWidth="400px" width="100%">
               <Label1>
                 {get(item, "name", "Name")} ({get(item, "nickname", "nickname")}
                 )
@@ -55,7 +56,7 @@ export default function UsersBubble({ users }) {
               <Label2 $as="a" href={`mailto:${get(item, "email", "")}`}>
                 {get(item, "email", "")}
               </Label2>
-              <Paragraph1>{get(item, "description", "Description")}</Paragraph1>
+              <Paragraph4>{get(item, "description", "Description")}</Paragraph4>
             </Block>
           )}
           focusLock

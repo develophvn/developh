@@ -12,4 +12,5 @@ module.exports = {
     "Join us in creating a brighter future for the people, the technology, and the world.",
   blogTitle: "Welcome to our blogs",
   blogSubtitle: "Here are some of our thoughts",
+  leaderSectionTitle: "Developh Vietnam Leadership Team",
 };

@@ -10,4 +10,5 @@ module.exports = {
   contactSubtitle: "Tham gia để tạo nên tương lai sáng lạn cho mọi người",
   blogTitle: "Chào mừng đến với Developh Blog",
   blogSubtitle: "Dưới đây là một số suy nghĩ của các thành viên",
+  leaderSectionTitle: "Ban quản lý của Developh Vietnam",
 };
