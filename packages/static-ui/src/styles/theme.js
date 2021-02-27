@@ -3,7 +3,7 @@ import { createTheme } from "baseui";
 const primitivies = {
   primary: "#130E56",
   accent: "#8356FF",
-  primaryFontFamily: "Circular Std",
+  primaryFontFamily: "CircularStd",
 };
 
 const overrides = {

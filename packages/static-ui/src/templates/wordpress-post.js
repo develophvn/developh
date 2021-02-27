@@ -7,7 +7,7 @@ import HTML2React from "html2react";
 import BlogContentWrapper from "../components/blogcontentwrapper";
 
 const WordpressPostWrapper = styled("div", {
-  paddingTop: "5rem",
+  paddingTop: "10rem",
   paddingLeft: "2rem",
   paddingRight: "2rem",
   paddingBottom: "5rem",
@@ -21,7 +21,6 @@ export default function WordpressPost({
     wpPost: { title, content },
   },
 }) {
-  console.log(content);
   return (
     <WordpressPostWrapper>
       <Helmet title={title} defer={false} />

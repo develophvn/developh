@@ -2,11 +2,12 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 import { Display2, H6 } from "baseui/typography";
 import { Button } from "baseui/button";
+import Background from "../../static/bg2.jpg";
 import FullScreenWrapper from "../../components/fullscreenwrapper";
 
 export default function Landing() {
   return (
-    <FullScreenWrapper backgroundcolor="#130E56">
+    <FullScreenWrapper backgroundimage={`url(${Background})`}>
       <Display2 color="white" maxWidth="500px" margin="0 auto">
         <FormattedMessage id="landingTitle" />
       </Display2>

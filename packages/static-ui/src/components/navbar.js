@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { ChevronDown, Delete } from "baseui/icon";
 import { FormattedMessage } from "react-intl";
+import Logo from "../static/LogoBlue.svg";
 
 import { AppNavBar, setItemActive } from "baseui/app-nav-bar";
 import { Link, navigate } from "gatsby";
@@ -43,6 +44,7 @@ const searchItem = (items, criteriaFn) => {
 
 const isItemMatchedURL = (item, url, currentLang) =>
   item.route &&
+  !item.isLanguageChange &&
   (item.route === url ||
     item.route === `${url}/` ||
     `/${currentLang.langKey}${item.route}` === url ||
@@ -91,15 +93,13 @@ const NavBar = ({ title, langsMenu }) => {
         icon: ChevronDown,
         label: <FormattedMessage id="selectLanguages" />,
         navExitIcon: Delete,
-        children: langsMenu
-          .filter((item) => !item.selected)
-          .map((item) => ({
-            ...item,
-            icon: () => <FontAwesomeIcon icon={faLanguage} />,
-            label: (LanguageMap[item.langKey] || LanguageMap.default).label,
-            route: item.link,
-            isLanguageChange: true,
-          })),
+        children: langsMenu.map((item) => ({
+          ...item,
+          icon: () => <FontAwesomeIcon icon={faLanguage} />,
+          label: (LanguageMap[item.langKey] || LanguageMap.default).label,
+          route: item.link,
+          isLanguageChange: true,
+        })),
       });
     }
     setMainItems(() => {
@@ -168,7 +168,11 @@ const NavBar = ({ title, langsMenu }) => {
           }
           replace={false}
         >
-          {title}
+          <img
+            className={css({ paddingTop: "5px" })}
+            src={Logo}
+            alt="LogoDevelophVN"
+          />
         </Link>
       }
       mainItems={mainItems}

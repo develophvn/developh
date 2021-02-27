@@ -3,10 +3,54 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 @font-face {
-  font-family: "Circular Std";
-  src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2")
-    format("woff2");
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-Medium.otf") format("otf");
 }
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-MediumItalic.otf") format("otf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-Bold.otf") format("otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-BoldItalic.otf") format("otf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-Book.otf") format("otf");
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-BookItalic.otf") format("otf");
+  font-style: oblique, italic;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-Black.otf") format("otf");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-BlackItalic.otf") format("otf");
+  font-weight: bolder;
+  font-style: italic;
+}
+
 body {
   margin: 0px;
   padding: 0px;

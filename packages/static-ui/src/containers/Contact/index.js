@@ -56,7 +56,6 @@ const ContactButton = ({ item }) => (
 );
 
 export default function Contact({ aboutInfo, users }) {
-  console.log(users);
   return (
     <FullScreenWrapper backgroundcolor="#B7A0FF">
       <Display2 color="white" maxWidth="800px" margin="0 auto">
