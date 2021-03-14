@@ -3,10 +3,8 @@ import { styled } from "baseui";
 const FullScreenWrapper = styled("div", ({ $theme, ...props }) => ({
   minHeight: "100vh",
   width: "100vw",
-  backgroundColor: props.backgroundcolor || $theme.colors.backgroundPrimary,
   backgroundImage: props.backgroundimage || "none",
-  paddingTop: "12rem",
-  paddingBottom: "12rem",
+  backgroundColor: props.backgroundcolor || $theme.colors.backgroundPrimary,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center center",
 }));

@@ -6,3 +6,5 @@ import "./src/styles/wordpress/components.min.css";
 import "./src/styles/wordpress/custom-styles.css";
 import "./src/styles/wordpress/font-awesome.min.css";
 import "./src/styles/wordpress/post-and-pages.min.css";
+
+import "./src/css/typography.css";

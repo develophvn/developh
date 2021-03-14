@@ -134,7 +134,7 @@ const NavBar = ({ title, langsMenu }) => {
       overrides={{
         Root: {
           style: {
-            position: "fixed",
+            position: "sticky",
             top: 0,
             zIndex: 2,
           },
@@ -157,15 +157,7 @@ const NavBar = ({ title, langsMenu }) => {
           className={css({
             textDecoration: "none",
           })}
-          to={
-            currentLang.isDefault
-              ? get(defaultMainItems, "0.route", "/")
-              : `/${currentLang.langKey}${get(
-                  defaultMainItems,
-                  "0.route",
-                  "/"
-                )}`
-          }
+          to={currentLang.isDefault ? "/" : `/${currentLang.langKey}/`}
           replace={false}
         >
           <img

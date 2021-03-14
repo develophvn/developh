@@ -2,6 +2,7 @@
  * Text Contrast
  * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
  */
+
 .color1-text-default {
   color: #fff;
 }

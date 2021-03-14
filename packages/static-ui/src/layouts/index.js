@@ -20,12 +20,10 @@ export const LayoutContext = React.createContext({});
 
 const StyledApp = styled("div", {
   position: "relative",
-  height: "100vh",
+  minHeight: "100vh",
 });
 
 const Content = styled("div", {
-  position: "absolute",
-  top: 0,
   zIndex: 0,
   textAlign: "center",
   height: "100%",

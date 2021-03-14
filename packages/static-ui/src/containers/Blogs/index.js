@@ -18,11 +18,12 @@ import { Button } from "baseui/button";
 import HTML2React from "html2react";
 
 import FeaturedImage from "../../static/default_featured_image.jpeg";
+import FullScreenWrapper from "../../components/fullscreenwrapper";
 
 const BlogWrapper = styled("div", {
   minHeight: "100vh",
   backgroundColor: "#130E56",
-  paddingTop: "10rem",
+  paddingTop: "3rem",
   paddingLeft: "3rem",
   paddingRight: "3rem",
 });
@@ -119,21 +120,23 @@ const BlogPostCard = ({ item }) => {
 // markup
 const Blog = ({ nodes }) => {
   return (
-    <BlogWrapper>
-      <Display2 color="white" maxWidth="500px" margin="0 auto">
-        <FormattedMessage id="blogTitle" />
-      </Display2>
-      <H6 color="white">
-        <FormattedMessage id="blogSubtitle" />
-      </H6>
-      <Grid>
-        {nodes.map((item) => (
-          <Cell span={[12, 4, 4]} key={item.uri}>
-            <BlogPostCard item={item} />
-          </Cell>
-        ))}
-      </Grid>
-    </BlogWrapper>
+    <FullScreenWrapper>
+      <BlogWrapper>
+        <Display2 color="white" maxWidth="500px" margin="0 auto">
+          <FormattedMessage id="blogTitle" />
+        </Display2>
+        <H6 color="white">
+          <FormattedMessage id="blogSubtitle" />
+        </H6>
+        <Grid>
+          {nodes.map((item) => (
+            <Cell span={[12, 4, 4]} key={item.uri}>
+              <BlogPostCard item={item} />
+            </Cell>
+          ))}
+        </Grid>
+      </BlogWrapper>
+    </FullScreenWrapper>
   );
 };
 
