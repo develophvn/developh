@@ -7,7 +7,7 @@ import HTML2React from "html2react";
 import BlogContentWrapper from "../components/blogcontentwrapper";
 
 const WordpressPostWrapper = styled("div", {
-  paddingTop: "10rem",
+  paddingTop: "3rem",
   paddingLeft: "2rem",
   paddingRight: "2rem",
   paddingBottom: "5rem",

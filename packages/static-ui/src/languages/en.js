@@ -13,4 +13,6 @@ module.exports = {
   blogTitle: "Welcome to our blogs",
   blogSubtitle: "Here are some of our thoughts",
   leaderSectionTitle: "Developh Vietnam Leadership Team",
+  clickTheBubblesToLearnAboutEachOfUs:
+    "Click The Bubble to Learn About Each of Us",
 };

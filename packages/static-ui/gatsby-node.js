@@ -1,4 +1,5 @@
 const languages = require("./src/languages");
+const { get } = require("lodash");
 
 const createWordPressPost = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
@@ -7,6 +8,11 @@ const createWordPressPost = async ({ actions, graphql, reporter }) => {
         nodes {
           id
           uri
+          tags {
+            nodes {
+              name
+            }
+          }
         }
       }
     }
@@ -21,10 +27,14 @@ const createWordPressPost = async ({ actions, graphql, reporter }) => {
   const postTemplate = require.resolve(`./src/templates/wordpress-post.js`);
   if (allWpPost.nodes.length) {
     allWpPost.nodes.map((post) => {
+      const tags = get(post, "tags.nodes", []);
+      const currentLang = languages.langs
+        .filter((lang) => lang !== languages.defaultLangKey)
+        .find((lang) => tags.some((tag) => tag.name === lang));
       actions.createPage({
         // It's best practice to use the uri field from WPGraphQL nodes when
         // building
-        path: post.uri,
+        path: currentLang ? `/${currentLang}${post.uri}` : post.uri,
         component: postTemplate,
         context: post,
       });

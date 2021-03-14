@@ -11,4 +11,6 @@ module.exports = {
   blogTitle: "Chào mừng đến với Developh Blog",
   blogSubtitle: "Dưới đây là một số suy nghĩ của các thành viên",
   leaderSectionTitle: "Ban quản lý của Developh Vietnam",
+  clickTheBubblesToLearnAboutEachOfUs:
+    "Ấn vào khuôn mặt để biết thêm về chúng tớ",
 };

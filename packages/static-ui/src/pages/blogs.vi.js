@@ -16,7 +16,11 @@ const BlogPage = ({
       ),
     [nodes]
   );
-  return <Blog nodes={showingNodes} />;
+  return (
+    <Blog
+      nodes={showingNodes.map((node) => ({ ...node, uri: `/vi${node.uri}` }))}
+    />
+  );
 };
 
 export const query = graphql`

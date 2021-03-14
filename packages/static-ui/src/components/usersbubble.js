@@ -1,10 +1,10 @@
 import React from "react";
 import BubbleUI from "./bubbleui";
 import { useStyletron } from "baseui";
-import { Block } from "baseui/block";
-import { StatefulTooltip, TRIGGER_TYPE, PLACEMENT } from "baseui/tooltip";
+import { Card, StyledAction, StyledBody, StyledThumbnail } from "baseui/card";
 import { get } from "lodash";
-import { Label1, Label2, Paragraph4 } from "baseui/typography";
+import { useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 const Options = {
   size: 200,
@@ -13,7 +13,7 @@ const Options = {
   provideProps: true,
   numCols: 5,
   fringeWidth: 100,
-  xRadius: 300,
+  xRadius: 200,
   yRadius: 140,
   cornerRadius: 30,
   showGuides: false,
@@ -23,49 +23,53 @@ const Options = {
 
 export default function UsersBubble({ users }) {
   const [css] = useStyletron();
+  const [currentUser, setCurrentUser] = useState(null);
+  console.log(currentUser);
   return (
-    <BubbleUI
-      options={Options}
-      className={css({
-        width: "100%",
-        maxWidth: "1500px",
-        height: "700px",
-        borderRadius: "50px",
-        marginLeft: "auto",
-        marginRight: "auto",
-        paddingBottom: "400px",
-      })}
-    >
-      {users.map((item) => (
-        <StatefulTooltip
-          placement={PLACEMENT.auto}
-          triggerType={TRIGGER_TYPE.hover}
+    <>
+      {!currentUser && (
+        <Card
+          title={<FormattedMessage id="clickTheBubblesToLearnAboutEachOfUs" />}
           overrides={{
-            Inner: {
-              style: ({ $theme }) => ({
-                backgroundColor: $theme.colors.white,
-              }),
+            Root: {
+              style: {
+                maxWidth: "500px",
+                maxHeight: "800px",
+                borderTopWidth: "0px",
+                borderLeftWidth: "0px",
+                borderRightWidth: "0px",
+                borderBottomColor: "transparent",
+                paddingBottom: "6px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                marginTop: "3rem",
+                backgroundColor: "transparent",
+              },
+            },
+            Title: {
+              style: {
+                color: "red",
+              },
             },
           }}
-          content={() => (
-            <Block padding={"20px"} maxWidth="400px" width="100%">
-              <Label1>
-                {get(item, "name", "Name")} ({get(item, "nickname", "nickname")}
-                )
-              </Label1>
-              <Label2 $as="a" href={`mailto:${get(item, "email", "")}`}>
-                {get(item, "email", "")}
-              </Label2>
-              <Paragraph4>{get(item, "description", "Description")}</Paragraph4>
-            </Block>
-          )}
-          focusLock
-          returnFocus
-          renderAll
-          showArrow
-        >
-          <div
+        />
+      )}
+      <BubbleUI
+        options={Options}
+        className={css({
+          width: "100%",
+          maxWidth: "1500px",
+          height: "700px",
+          borderRadius: "50px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        })}
+      >
+        {users.map((item) => (
+          <button
             key={item.email}
+            type="button"
+            aria-label={get(item, "name")}
             className={css({
               width: "100%",
               borderRadius: "50%",
@@ -74,13 +78,49 @@ export default function UsersBubble({ users }) {
               marginTop: "10%",
               backgroundImage: `url(${get(item, "avatar.url")})`,
               backgroundSize: "contain",
+              outline: "none",
               ":hover": {
                 opacity: "0.5",
               },
+              opacity: item === currentUser ? "0.5" : "1",
             })}
+            onClick={() => {
+              setCurrentUser(item);
+            }}
           />
-        </StatefulTooltip>
-      ))}
-    </BubbleUI>
+        ))}
+      </BubbleUI>
+      {currentUser && (
+        <Card
+          overrides={{
+            Root: {
+              style: {
+                textAlign: "left",
+                width: "100%",
+                maxWidth: "500px",
+                minHeight: "200px",
+                borderTopWidth: "0px",
+                borderLeftWidth: "0px",
+                borderRightWidth: "0px",
+                paddingBottom: "6px",
+                paddingTop: "6px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                marginTop: "-30px",
+              },
+            },
+          }}
+          title={`${get(
+            currentUser,
+            "name",
+            <FormattedMessage id="placeholderName" />
+          )} (${get(currentUser, "nickname")})`}
+        >
+          <StyledThumbnail src={get(currentUser, "avatar.url")} />
+          <StyledBody>{get(currentUser, "description")}</StyledBody>
+          <StyledAction>Email: {get(currentUser, "email")}</StyledAction>
+        </Card>
+      )}
+    </>
   );
 }

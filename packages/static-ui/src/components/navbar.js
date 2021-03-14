@@ -172,7 +172,11 @@ const NavBar = ({ title, langsMenu }) => {
         setMainItems((prev) => setItemActive(prev, item));
         if (item.route) {
           if (item.isLanguageChange) {
-            navigate(`/${item.isDefault ? "" : item.langKey}`);
+            const newRoute = window.location.pathname.replace(
+              /\/[a-z][a-z]\//,
+              "/"
+            );
+            navigate(item.isDefault ? newRoute : `/${item.langKey}${newRoute}`);
           } else {
             navigate(
               currentLang.isDefault

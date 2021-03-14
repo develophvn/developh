@@ -19,6 +19,7 @@ const ContactWrapper = styled("div", {
   paddingTop: "3rem",
   paddingLeft: "3rem",
   paddingRight: "3rem",
+  paddingBottom: "3rem",
 });
 
 const Contacts = [
