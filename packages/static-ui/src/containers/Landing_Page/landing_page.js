@@ -4,6 +4,10 @@ module.exports = `
 	data-wf-site="60cacdc34d2a0e1c9519b3b1">
 
 <head>
+    <style>
+        :host { all: initial }
+    </style>
+    
 	<meta charset="utf-8">
 	<title>Developh | Your Tech Career Mentor and Partner</title>
 	<meta content="We train future changemakers to jump-start their tech careers and realize disruptive innovations."
