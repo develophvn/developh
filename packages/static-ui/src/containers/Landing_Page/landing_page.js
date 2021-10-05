@@ -54,29 +54,29 @@ background: rgba(255, 255, 255, 0.88);
 
 <body class="body">
 	<div id="hero" class="hero-section">
-		<div data-animation="over-right" class="navbar w-nav" data-easing2="ease-in-out" data-easing="ease-in-out"
-			data-collapse="small" data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec527" role="banner" data-duration="300"
-			data-doc-height="1">
-			<div class="container nav w-container"><a href="#hero" class="brand w-nav-brand"><img
-						src="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60cd65c9bd1157a9c3b50749_Logo%20White.svg"
-						loading="lazy" style="opacity:1" data-w-id="6d81b76d-6420-928a-864e-57f9dc46de6d" alt
-						class="image"><img
-						src="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60ceba7dd1b31b6b148b9225_logo2.svg"
-						loading="lazy" style="opacity:0" data-w-id="e44c2661-7e38-5b5d-6ddc-2f72d9ce9c38" alt
-						class="image-7"></a>
-				<nav role="navigation" class="nav-menu w-nav-menu"><a href="#about-us"
-						class="nav-button w-nav-link">About Us</a><a href="#footer" style="color:rgb(255,255,255)"
-						class="nav-button w-nav-link">Contact Us</a>
-					<div data-w-id="6a193bb3-c766-3b47-ded9-add2226ec613" class="div-block"></div><a href="#"
-						style="color:rgb(255,255,255)" class="nav-button w-nav-link">Our Blog</a>
-				</nav>
-				<div data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec531" class="menu-button w-nav-button">
-					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>
-					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>
-					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>
-				</div>
-			</div>
-		</div>
+<!--		<div data-animation="over-right" class="navbar w-nav" data-easing2="ease-in-out" data-easing="ease-in-out"-->
+<!--			data-collapse="small" data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec527" role="banner" data-duration="300"-->
+<!--			data-doc-height="1">-->
+<!--			<div class="container nav w-container"><a href="#hero" class="brand w-nav-brand"><img-->
+<!--						src="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60cd65c9bd1157a9c3b50749_Logo%20White.svg"-->
+<!--						loading="lazy" style="opacity:1" data-w-id="6d81b76d-6420-928a-864e-57f9dc46de6d" alt-->
+<!--						class="image"><img-->
+<!--						src="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60ceba7dd1b31b6b148b9225_logo2.svg"-->
+<!--						loading="lazy" style="opacity:0" data-w-id="e44c2661-7e38-5b5d-6ddc-2f72d9ce9c38" alt-->
+<!--						class="image-7"></a>-->
+<!--				<nav role="navigation" class="nav-menu w-nav-menu"><a href="#about-us"-->
+<!--						class="nav-button w-nav-link">About Us</a><a href="#footer" style="color:rgb(255,255,255)"-->
+<!--						class="nav-button w-nav-link">Contact Us</a>-->
+<!--					<div data-w-id="6a193bb3-c766-3b47-ded9-add2226ec613" class="div-block"></div><a href="#"-->
+<!--						style="color:rgb(255,255,255)" class="nav-button w-nav-link">Our Blog</a>-->
+<!--				</nav>-->
+<!--				<div data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec531" class="menu-button w-nav-button">-->
+<!--					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>-->
+<!--					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>-->
+<!--					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
 		<div class="container-2 w-container">
 			<div class="event-main">
 				<div class="event-info-hero">
