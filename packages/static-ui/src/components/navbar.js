@@ -136,7 +136,7 @@ const NavBar = ({ title, langsMenu }) => {
           style: {
             position: "sticky",
             top: 0,
-            zIndex: 2,
+            zIndex: 50,
           },
         },
         MobileDrawer: {
@@ -144,7 +144,7 @@ const NavBar = ({ title, langsMenu }) => {
             overrides: {
               Root: {
                 style: {
-                  zIndex: 10,
+                  zIndex: 99,
                   paddingTop: "5rem",
                 },
               },
