@@ -7,7 +7,7 @@ export const WEBSITE_INFO = {
   routes: [
     {
       label: "Home",
-      route: "/landing_page",
+      route: "/",
       icon: () => <FontAwesomeIcon icon={faHome} />,
     },
     {

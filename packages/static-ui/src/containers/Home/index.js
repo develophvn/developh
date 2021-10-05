@@ -1,20 +1,15 @@
-import * as React from "react";
-import { styled } from "baseui";
-import Landing from "./landing";
-import OfferInfo from "./offerinfo";
+import React, {Component} from "react";
+import __html from "./landing_page";
+import root from "react-shadow";
 
-const Centered = styled("div", {
-  textAlign: "center",
-});
+class LandingPage extends Component {
+  render() {
+    return (
+        <root.div mode="open">
+          <div dangerouslySetInnerHTML={{__html: __html}}/>
+        </root.div>
+    );
+  }
+}
 
-// markup
-const Home = ({ offers }) => {
-  return (
-    <Centered>
-      <Landing />
-      <OfferInfo offers={offers} />
-    </Centered>
-  );
-};
-
-export default Home;
+export default LandingPage;
