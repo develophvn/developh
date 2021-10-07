@@ -1,6 +1,12 @@
 export default `
+<!--        <html data-wf-page="60cacdc34d2a0e6df119b3b2">-->
         <html>
             <head>
+                <style>
+                    :host {
+                        all: initial
+                    }
+                </style>
                 <meta charset="utf-8">
                 <title>Developh | Your Tech Career Mentor and Partner</title>
                 <meta content="We train future changemakers to jump-start their tech careers and realize disruptive innovations."
@@ -20,6 +26,7 @@ export default `
                 <meta content="width=device-width, initial-scale=1" name="viewport">
                 <meta content="Webflow" name="generator">
                 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+                <link rel="stylesheet" href="./landing_page.css">
 
                 <link href="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60ceb4ee525314ee13394bce_favicon.png"
                 rel="shortcut icon" type="image/x-icon">

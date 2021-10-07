@@ -29,7 +29,7 @@
   overflow: hidden;
   height: 800px;
   background-color: transparent;
-  background-image: url("../611630f8828f08fc77012b9a_Web%20Cover.png");
+  background-image: url("images/611630f8828f08fc77012b9a_Web_Cover.png");
   background-position: 50% 0%;
   background-size: cover;
   background-repeat: repeat;
@@ -273,7 +273,7 @@
 
 .event-img.img1 {
   position: relative;
-  background-image: url("../60cdbad25aaef478952fbc4e_109124381_172045777665203_5641674283593689954_n.jpeg");
+  background-image: url("blog_images/60cdbad25aaef478952fbc4e_109124381_172045777665203_5641674283593689954_n.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -282,7 +282,7 @@
   position: relative;
   margin-top: 0px;
   background-color: #e75a5d;
-  background-image: url("../60cdbad1558b6c56db63a532_94197204_2045343552277739_451954795763204096_n.jpeg");
+  background-image: url("blog_images/60cdbad1558b6c56db63a532_94197204_2045343552277739_451954795763204096_n.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -290,7 +290,7 @@
 .event-img.img3 {
   position: relative;
   border-radius: 0px;
-  background-image: url("../60cdbad23fb64cf63f277a2d_124348327_202381101298337_8409323548489703418_n.jpeg");
+  background-image: url("blog_images/60cdbad23fb64cf63f277a2d_124348327_202381101298337_8409323548489703418_n.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -298,7 +298,7 @@
 .event-img.img4 {
   position: relative;
   border-radius: 0px;
-  background-image: url("../60cdbad27d6b227c2901ace9_152032347_265495371653576_8386793872028597589_n.jpeg");
+  background-image: url("blog_images/60cdbad27d6b227c2901ace9_152032347_265495371653576_8386793872028597589_n.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -1627,28 +1627,28 @@
 }
 @font-face {
   font-family: 'Caveat';
-  src: url('../60cd641064d63224f951f843_Caveat-Bold.ttf') format('truetype');
+  src: url('fonts/60cd641064d63224f951f843_Caveat-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Circularstd book';
-  src: url('../60cd6410b00b5f00d7090f24_CircularStd-Book.otf') format('opentype');
+  src: url('fonts/60cd6410b00b5f00d7090f24_CircularStd-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Circularstd';
-  src: url('../60cd641009f9cd17c7395478_CircularStd-Black.otf') format('opentype');
+  src: url('fonts/60cd641009f9cd17c7395478_CircularStd-Black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Circularstd';
-  src: url('../60cd641029f7764fde21010d_CircularStd-Medium.otf') format('opentype');
+  src: url('fonts/60cd641029f7764fde21010d_CircularStd-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
