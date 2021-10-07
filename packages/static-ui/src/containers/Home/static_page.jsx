@@ -2,11 +2,6 @@ export default `
 <!--        <html data-wf-page="60cacdc34d2a0e6df119b3b2">-->
         <html>
             <head>
-                <style>
-                    :host {
-                        all: initial
-                    }
-                </style>
                 <meta charset="utf-8">
                 <title>Developh | Your Tech Career Mentor and Partner</title>
                 <meta content="We train future changemakers to jump-start their tech careers and realize disruptive innovations."
