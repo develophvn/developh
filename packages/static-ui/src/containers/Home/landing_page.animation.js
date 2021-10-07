@@ -1,5 +1,7 @@
 export default async function landingPageAnimation() {
-	// const root = document.getElementById('shadow-dom').shadowRoot.children[0];
+	await new Promise(r => setTimeout(r, 500));
+	// const root = document.getElementById('shadow-dom')?.shadowRoot?.children[0];
+	// console.log(root)
 	// const root = document.getElementById('shadow-dom').children[0];
 
 	const executeHotScript = (path) => {
@@ -25,6 +27,6 @@ export default async function landingPageAnimation() {
 	// console.log(root)
 
 	await executeHotScript("https://code.jquery.com/jquery-3.5.1.min.js")
-	await new Promise(r => setTimeout(r, 2000));
+	await new Promise(r => setTimeout(r, 2500));
 	await executeHotScript("./landing_page.animation.js")
 }

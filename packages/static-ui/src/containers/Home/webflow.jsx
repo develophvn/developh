@@ -3,12 +3,13 @@ import __html from "./landing_page";
 import landingPageAnimation from "./landing_page.animation";
 
 class Webflow extends React.Component {
-    componentDidMount = () => {
-        landingPageAnimation()
-    };
+    // componentDidMount = () => {
+    //     landingPageAnimation()
+    // };
     render() {
         return (
-            <div id="shadow-dom" dangerouslySetInnerHTML={{__html}}/>
+            // <div id="shadow-dom" dangerouslySetInnerHTML={{__html}}/>
+            <div dangerouslySetInnerHTML={{__html}}/>
         );
     }
 }

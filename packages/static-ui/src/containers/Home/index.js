@@ -13,7 +13,13 @@ class LandingPage extends Component {
     return (
         // <root.div id="shadow-dom" mode="open">
         //   <Webflow />
-          <div dangerouslySetInnerHTML={{__html}}/>
+          <html
+              style={{
+                all: 'initial'
+              }}
+              data-wf-page="60cacdc34d2a0e6df119b3b2"
+              dangerouslySetInnerHTML={{__html}}
+          />
         // </root.div>
     );
   }
