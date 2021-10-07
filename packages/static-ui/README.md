@@ -9,6 +9,12 @@
 
 ## 🚀 Quick start
 
+Yarn for development
+
+Netlify for DNS configuration
+
+Gatsby Cloud for deployment
+
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the minimal starter.
