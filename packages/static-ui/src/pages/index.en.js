@@ -80,7 +80,21 @@ const Data = {
       }
     ]
   },
-  footer: {}
+  footer: {
+    title: "We nurture young change-makers through technology and education",
+    info: [
+      {
+        description: "At Developh Vietnam, our team bonds as teammates and friends. Together, we create magic and keep the organization on track.",
+        button: "Connect With Us",
+        link: "https://www.facebook.com/develophvn"
+      },
+      {
+        description: "Join us to create a brighter future with technology and innovation, for the people and the world.",
+        button: "Support Us",
+        link: "https://www.paypal.com/paypalme/Linh137"
+      }
+    ]
+  }
 }
 
 // markup
