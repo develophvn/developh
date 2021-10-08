@@ -16,10 +16,10 @@ class LandingPage extends Component {
     return (
         <div style={{all: 'initial'}}>
           <div className="body">
-            <Hero images={hero.images} />
-            <AboutUs images={aboutUs.images} />
-            <Event images={event.images}/>
-            <Footer images={footer.images} />
+            <Hero data={hero} />
+            <AboutUs data={aboutUs} />
+            <Event data={event}/>
+            <Footer data={footer} />
           </div>
         </div>
     );
