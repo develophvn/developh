@@ -46,7 +46,7 @@ export function Event(
           <div className="w-layout-grid grid">
 
             {events.map((event) =>
-                <EventNode event={event}/>
+                <EventNode key={event.title} event={event}/>
             )}
 
           </div>

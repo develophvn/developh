@@ -44,7 +44,7 @@ export function AboutUs(
             </Offer>
 
             {offers.slice(1).map((offer) => (
-                  <Offer offer={offer}/>
+                  <Offer key={offer.title} offer={offer}/>
             ))}
 
           </div>
