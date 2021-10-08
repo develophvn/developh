@@ -12,13 +12,14 @@ class LandingPage extends Component {
   };
 
   render() {
+    const {hero, aboutUs, event, footer} = this.props.data;
     return (
         <div style={{all: 'initial'}}>
           <div className="body">
-            <Hero/>
-            <AboutUs/>
-            <Event/>
-            <Footer/>
+            <Hero images={hero.images} />
+            <AboutUs images={aboutUs.images} />
+            <Event images={event.images}/>
+            <Footer images={footer.images} />
           </div>
         </div>
     );
