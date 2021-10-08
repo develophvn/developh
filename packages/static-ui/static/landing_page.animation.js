@@ -6,8 +6,6 @@
  *   Webflow.push(readyFunction);
  */
 ! function (t) {
-	console.log('animation started')
-	console.log(window)
 	var e = {};
 
 	function n(r) {

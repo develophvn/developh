@@ -1,72 +1,6 @@
 export default `
-<!--        <html data-wf-page="60cacdc34d2a0e6df119b3b2">-->
-        <html>
-            <head>
-                <meta charset="utf-8">
-                <title>Developh | Your Tech Career Mentor and Partner</title>
-                <meta content="We train future changemakers to jump-start their tech careers and realize disruptive innovations."
-                name="description">
-                <meta content="Developh | Your Tech Career Mentor and Partner" property="og:title">
-                <meta content="We train future changemakers to jump-start their tech careers and realize disruptive innovations."
-                property="og:description">
-                <meta content="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/61165e55a4630272496a31c2_Open%20Graph.png"
-                property="og:image">
-                <meta content="Developh | Your Tech Career Mentor and Partner" property="twitter:title">
-                <meta content="We train future changemakers to jump-start their tech careers and realize disruptive innovations."
-                property="twitter:description">
-                <meta content="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/61165e55a4630272496a31c2_Open%20Graph.png"
-                property="twitter:image">
-                <meta property="og:type" content="website">
-                <meta content="summary_large_image" name="twitter:card">
-                <meta content="width=device-width, initial-scale=1" name="viewport">
-                <meta content="Webflow" name="generator">
-                <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
-                <link rel="stylesheet" href="./landing_page.css">
-
-                <link href="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60ceb4ee525314ee13394bce_favicon.png"
-                rel="shortcut icon" type="image/x-icon">
-                <link href="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60ceb584771e483b56645eba_webclip.png"
-                rel="apple-touch-icon">
-                <style>
-                .event-main {
-                background: linear-gradient(28.56deg, #FFFFFF -4.5%, #FFFFFF 50.32%, rgba(255, 255, 255, 0.88) 79.57%, rgba(255, 255, 255, 0.48) 112.43%);
-                box-shadow: 0px 26px 40px rgba(15, 13, 66, 0.2);
-                -webkit-backdrop-filter: blur(32px);
-                }
-
-                /* .nav-menu {
-                background: rgba(255, 255, 255, 0.88);
-                -webkit-backdrop-filter: blur(40px);
-                }
-                */
-                </style>
-            </head>
-
             <body class="body">
             <div id="hero" class="hero-section">
-                <!--		<div data-animation="over-right" class="navbar w-nav" data-easing2="ease-in-out" data-easing="ease-in-out"-->
-                <!--			data-collapse="small" data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec527" role="banner" data-duration="300"-->
-                <!--			data-doc-height="1">-->
-                <!--			<div class="container nav w-container"><a href="#hero" class="brand w-nav-brand"><img-->
-                <!--						src="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60cd65c9bd1157a9c3b50749_Logo%20White.svg"-->
-                <!--						loading="lazy" style="opacity:1" data-w-id="6d81b76d-6420-928a-864e-57f9dc46de6d" alt-->
-                <!--						class="image"><img-->
-                <!--						src="https://uploads-ssl.webflow.com/60cacdc34d2a0e1c9519b3b1/60ceba7dd1b31b6b148b9225_logo2.svg"-->
-                <!--						loading="lazy" style="opacity:0" data-w-id="e44c2661-7e38-5b5d-6ddc-2f72d9ce9c38" alt-->
-                <!--						class="image-7"></a>-->
-                <!--				<nav role="navigation" class="nav-menu w-nav-menu"><a href="#about-us"-->
-                <!--						class="nav-button w-nav-link">About Us</a><a href="#footer" style="color:rgb(255,255,255)"-->
-                <!--						class="nav-button w-nav-link">Contact Us</a>-->
-                <!--					<div data-w-id="6a193bb3-c766-3b47-ded9-add2226ec613" class="div-block"></div><a href="#"-->
-                <!--						style="color:rgb(255,255,255)" class="nav-button w-nav-link">Our Blog</a>-->
-                <!--				</nav>-->
-                <!--				<div data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec531" class="menu-button w-nav-button">-->
-                <!--					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>-->
-                <!--					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>-->
-                <!--					<div style="background-color:rgb(255,255,255)" class="hamburgur-bar"></div>-->
-                <!--				</div>-->
-                <!--			</div>-->
-                <!--		</div>-->
                 <div class="container-2 w-container">
                     <div class="event-main">
                         <div class="event-info-hero">
@@ -262,6 +196,4 @@ export default `
                     <p class="paragraph-2">© 2021 Developh. All rights reserved.</p>
                 </div>
             </div>
-            <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-            </body>
-        </html>`;
+            </body>`;
