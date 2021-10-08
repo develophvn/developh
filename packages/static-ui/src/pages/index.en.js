@@ -11,7 +11,7 @@ const Data = {
   },
   aboutUs: {
     title: "Sooo, who are we?",
-    description: "Founded in 2020, the two founders envision a future where technology education\n              is inclusive and Developh Vietnam is the core to unleash full potential of aspiring software engineers.",
+    description: "Founded in 2020, the two founders envision a future where technology education is inclusive and Developh Vietnam is the core to unleash full potential of aspiring software engineers.",
     offers: [
       {
         title: "Developh Class",
