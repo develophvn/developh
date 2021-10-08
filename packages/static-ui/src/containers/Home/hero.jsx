@@ -4,11 +4,11 @@ export const Hero = (
     {
       data: {
         images: {
-          bg: {src}
+          bg: {src, cover}
         }
       }
     }
-) => <div id="hero" className="hero-section">
+) => <div id="hero" style={{backgroundImage: `url(${cover})`}} className="hero-section">
   <div className="container-2 w-container">
     <div className="event-main">
       <div className="event-info-hero">

@@ -5,7 +5,8 @@ const Data = {
   hero: {
     images: {
       bg: {
-        src: "./images/611634f1f5543c66e7859c9f_pins_png.png"
+        src: "./images/611634f1f5543c66e7859c9f_pins_png.png",
+        cover: "./images/611630f8828f08fc77012b9a_Web_Cover.png"
       }
     }
   },
