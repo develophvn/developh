@@ -51,7 +51,35 @@ const Data = {
       },
     ]
   },
-  event: {},
+  event: {
+    title: "Since the foundation, we have organized various events tailored for developers of different levels and interests",
+    events: [
+      {
+        image: "blog_images/60cdbad25aaef478952fbc4e_109124381_172045777665203_5641674283593689954_n.jpeg",
+        title: "Developh’s Fullstack Coding Class",
+        date: "May 01 2020",
+        link: "#"
+      },
+      {
+        image: "blog_images/60cdbad1558b6c56db63a532_94197204_2045343552277739_451954795763204096_n.jpeg",
+        title: "Tech Talks INTO",
+        date: "May 10 2020",
+        link: "https://www.facebook.com/events/2848424778581476/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+      },
+      {
+        image: "blog_images/60cdbad23fb64cf63f277a2d_124348327_202381101298337_8409323548489703418_n.jpeg",
+        title: "Unicode: Into the Tech World",
+        date: "November 28 2020",
+        link: "https://www.facebook.com/events/1070462483385271/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
+      },
+      {
+        image: "blog_images/60cdbad27d6b227c2901ace9_152032347_265495371653576_8386793872028597589_n.jpeg",
+        title: "EmPower: Uncovering UX/UI World",
+        date: "Mars 07 2021",
+        link: "https://www.facebook.com/events/739583093596043?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
+      }
+    ]
+  },
   footer: {}
 }
 
