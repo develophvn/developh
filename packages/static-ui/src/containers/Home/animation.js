@@ -22,5 +22,5 @@ export default function startAnimation() {
 	// set hash - the *key* for animation script
 	document.getElementsByTagName('html')[0].setAttribute("data-wf-page","60cacdc34d2a0e6df119b3b2")
 	executeHotScript("https://code.jquery.com/jquery-3.5.1.min.js") // can't use async await here because of its nature
-	waitUntilJqueryFullyLoaded(() => executeHotScript("./landing_page.animation.js"))
+	waitUntilJqueryFullyLoaded(() => executeHotScript("/landing_page.animation.js"))
 }
