@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import startAnimation from "./animation";
 import "./landing_page.css";
-import {Hero} from "./hero";
-import {AboutUs} from "./aboutUs";
-import {Event} from "./event";
-import {Footer} from "./footer";
+import {Hero} from "./section/hero";
+import {AboutUs} from "./section/aboutUs";
+import {Event} from "./section/event";
+import {Footer} from "./section/footer";
 
 class LandingPage extends Component {
   componentDidMount = () => {
