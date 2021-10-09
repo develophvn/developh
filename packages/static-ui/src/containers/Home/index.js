@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import startAnimation from "./animation";
-import "../../../static/landing_page.css";
+import "./landing_page.css";
 import {Hero} from "./hero";
 import {AboutUs} from "./aboutUs";
 import {Event} from "./event";
