@@ -40,7 +40,7 @@ export function Event(
         <div className="container w-container">
           <div className="body2">
             <h1 className="body-heading body2-heading">{title}</h1><img
-              src="./others/60ceb17ce3936444cb028ed0_also_for_designers!.svg"
+              src="/images/60ceb17ce3936444cb028ed0_also_for_designers!.svg"
               loading="lazy" alt="" className="image-5"/>
           </div>
           <div className="w-layout-grid grid">

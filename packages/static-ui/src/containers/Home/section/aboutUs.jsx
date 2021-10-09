@@ -39,7 +39,7 @@ export function AboutUs(
           <div className="w-layout-grid grid-wae">
 
             <Offer offer={offers[0]}>
-              <img src="./others/60cdb3b09041b4439b8e983e_Group_14.svg"
+              <img src="/images/60cdb3b09041b4439b8e983e_Group_14.svg"
                 loading="lazy" alt="" className="image-4"/>
             </Offer>
 
