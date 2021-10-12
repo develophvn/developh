@@ -4,3 +4,5 @@ public
 
 # Local Netlify folder
 .netlify
+/static/remote
+/package-lock.json

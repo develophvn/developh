@@ -83,3 +83,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   await createWordPressPost({ actions, graphql, reporter });
   await createWordPressPage({ actions, graphql, reporter });
 };
+
+exports.onPreInit = async ({actions}) => {
+  await require('./src/utils/pull-remote-files')()
+}
