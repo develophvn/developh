@@ -4,8 +4,11 @@ const https = require("https");
 
 module.exports = async function downloadRemoteFiles() {
   const {location, remoteFiles} = REMOTE_RESOURCES;
-  console.log(__filename)
-  console.log(__dirname);
+  console.log("Downloading remote files to " + location);
+  if (!fs.existsSync(location)) {
+    console.log(`Directory ${location} does not exist, creating...`);
+    fs.mkdirSync(location, {recursive: true});
+  }
 
   return await Promise.all(remoteFiles.map(async (remoteFileUrl) => {
     const fileName = remoteFileUrl.substring(remoteFileUrl.lastIndexOf('/') + 1);
