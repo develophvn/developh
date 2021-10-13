@@ -2,17 +2,25 @@ const REMOTE_RESOURCES = require('../remote-resources.json');
 const fs = require("fs");
 const https = require("https");
 
-module.exports = () => {
+module.exports = async function downloadRemoteFiles() {
   const {location, remoteFiles} = REMOTE_RESOURCES;
+  console.log(__filename)
+  console.log(__dirname);
 
-  remoteFiles.forEach((remoteFile) => {
-    const fileName = remoteFile.substring(remoteFile.lastIndexOf('/')+1);
-    console.log("Downloading " + fileName)
-    const file = fs.createWriteStream(location + fileName);
-    const request = https.get(remoteFile, function (response) {
-      response.pipe(file);
-      console.log(fileName + " is downloaded successfully!")
-    });
-  })
+  return await Promise.all(remoteFiles.map(async (remoteFileUrl) => {
+    const fileName = remoteFileUrl.substring(remoteFileUrl.lastIndexOf('/') + 1);
+    const file = await fs.createWriteStream(location + fileName);
+    console.log(`Downloading ${fileName} from ${remoteFileUrl}`)
+    await new Promise((resolve, reject) => {
+      https.get(remoteFileUrl, response => {
+        response.pipe(file);
+        console.log(fileName + " is downloaded successfully!")
+        resolve();
+      }).on('error', err => { // Handle errors
+        console.error(err.message)
+        console.error(`Cannot download ${fileName} from ${remoteFileUrl}`)
+      });
+    })
+  }));
 
 }
