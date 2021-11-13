@@ -101,6 +101,15 @@ const Data = {
       }
     ]
   },
+  testimonial: {
+    title: "...and we has received a lot of support from everyone",
+    testimonials: [
+      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
+      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
+      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
+      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"}
+    ]
+  },
   footer: {
     title: "We nurture young change-makers through technology and education",
     info: [
