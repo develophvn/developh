@@ -2,8 +2,6 @@ import React from 'react';
 import * as PropTypes from "prop-types";
 
 function TagItem({title, color}) {
-  console.trace(title)
-  console.trace(color)
   return (
       <li className="list-item">
         <div className="event-tag" style={{borderColor: color}}><p className="event-tag-content"
@@ -29,7 +27,6 @@ function EventNode(
       }
     }
 ) {
-  console.log(image, title, startDate, endDate, link, tags)
   return (
       <div className="event-wae">
         <div className="columns w-row">
