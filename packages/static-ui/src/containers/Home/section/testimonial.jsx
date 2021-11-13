@@ -1,15 +1,14 @@
 import React from 'react';
-import * as PropTypes from "prop-types";
 
 function PersonalStatement(
     {
-        testimonial: {
-            avatar,
-            name,
-            position,
-            color,
-            statement
-        }
+      testimonial: {
+        avatar,
+        name,
+        position,
+        color,
+        statement
+      }
     }
 ) {
   return (
@@ -18,7 +17,8 @@ function PersonalStatement(
         <div className="div-block-4"><img
             src={avatar} loading="lazy"
             width="49" alt={name} className="image-9"/>
-          <div className="div-block-5"><h5 className="heading-3">{name}</h5>
+          <div className="div-block-5">
+            <p className="paragraph-8">{name}</p>
             <div className="text-block" style={{color: color}}>{position}</div>
           </div>
         </div>
