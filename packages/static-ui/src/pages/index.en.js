@@ -56,10 +56,10 @@ const Data = {
     title: "Since the foundation, we have organized various events tailored for developers of different levels and interests",
     events: [
       {
-        image: "/images/home/60cdbad25aaef478952fbc4e_109124381_172045777665203_5641674283593689954_n.jpeg",
-        title: "Developh’s Fullstack Coding Class",
-        startDate: "May 01 2020",
-        endDate: "May 02 2021",
+        image: "/images/home/web-wallpaper.png",
+        title: "Design of Things",
+        startDate: "Sep 05 2021",
+        endDate: "Oct 10 2021",
         link: "#",
         tags: [
           {title: "Tech", color: "#0669ff"},
@@ -67,22 +67,11 @@ const Data = {
         ]
       },
       {
-        image: "/images/home/60cdbad1558b6c56db63a532_94197204_2045343552277739_451954795763204096_n.jpeg",
-        title: "Tech Talks INTO",
-        startDate: "May 10 2020",
-        endDate: "May 02 2021",
+        image: "/images/home/diy-program-01.png",
+        title: "Do it Yourself Program",
+        startDate: "Jul 15 2021",
+        endDate: "Oct 30 2021",
         link: "https://www.facebook.com/events/2848424778581476/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
-        tags: [
-          {title: "Tech", color: "#0669ff"},
-          {title: "Mentoring Program", color: "#0AB88A"}
-        ]
-      },
-      {
-        image: "/images/home/60cdbad23fb64cf63f277a2d_124348327_202381101298337_8409323548489703418_n.jpeg",
-        title: "Unicode: Into the Tech World",
-        startDate: "November 28 2020",
-        endDate: "May 02 2021",
-        link: "https://www.facebook.com/events/1070462483385271/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D",
         tags: [
           {title: "Tech", color: "#0669ff"},
           {title: "Mentoring Program", color: "#0AB88A"}
@@ -92,8 +81,19 @@ const Data = {
         image: "/images/home/60cdbad27d6b227c2901ace9_152032347_265495371653576_8386793872028597589_n.jpeg",
         title: "EmPower: Uncovering UX/UI World",
         startDate: "Mars 07 2021",
-        endDate: "May 02 2021",
+        endDate: "May 07 2021",
         link: "https://www.facebook.com/events/739583093596043?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D",
+        tags: [
+          {title: "Tech", color: "#0669ff"},
+          {title: "Mentoring Program", color: "#0AB88A"}
+        ]
+      },
+      {
+        image: "/images/home/60cdbad23fb64cf63f277a2d_124348327_202381101298337_8409323548489703418_n.jpeg",
+        title: "Unicode: Into the Tech World",
+        startDate: "November 28 2020",
+        endDate: "Dev 06 2020",
+        link: "https://www.facebook.com/events/1070462483385271/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D",
         tags: [
           {title: "Tech", color: "#0669ff"},
           {title: "Mentoring Program", color: "#0AB88A"}
@@ -104,10 +104,10 @@ const Data = {
   testimonial: {
     title: "...and we has received a lot of support from everyone",
     testimonials: [
-      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
-      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
-      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
-      {avatar: "#", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"}
+      {avatar: "https://media-exp1.licdn.com/dms/image/C5603AQEviOU7ZCs6Jw/profile-displayphoto-shrink_800_800/0/1623775546830?e=1642032000&v=beta&t=oH5p-MARuiqdkK63CI9Jgt5ua-Ro4t5n1pZCXYmv6XQ", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
+      {avatar: "https://media-exp1.licdn.com/dms/image/C5603AQEviOU7ZCs6Jw/profile-displayphoto-shrink_800_800/0/1623775546830?e=1642032000&v=beta&t=oH5p-MARuiqdkK63CI9Jgt5ua-Ro4t5n1pZCXYmv6XQ", name: "Thuy Duong Le Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "I really appreciate that Developh allows everyone to make their own first products and give very detailed feedback!"},
+      {avatar: "https://scontent.fhan3-4.fna.fbcdn.net/v/t1.6435-9/184195593_2888443808074177_2040427941686235851_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=WbVocAcCjyAAX978zp7&_nc_ht=scontent.fhan3-4.fna&oh=b6629a23e000fa3cd2fe9854786c6ebe&oe=61B4746A", name: "Hoang Minh Quan", position: "Mentee @ Do it Yourself Program", color: "#0669FF", statement: "The mentors are very enthusiastic, in addition to the lecture, we also shared more practical experience in the industry. Worth participating!"},
+      {avatar: "https://media-exp1.licdn.com/dms/image/C5603AQEviOU7ZCs6Jw/profile-displayphoto-shrink_800_800/0/1623775546830?e=1642032000&v=beta&t=oH5p-MARuiqdkK63CI9Jgt5ua-Ro4t5n1pZCXYmv6XQ", name: "Hoang Dan Nguyen", position: "Participant @ Unicode: Into the Tech World", color: "#0AB88A", statement: "I received very useful shares, it helps me have a better overview of fullstack development and will definitely be useful in the future!"}
     ]
   },
   footer: {
