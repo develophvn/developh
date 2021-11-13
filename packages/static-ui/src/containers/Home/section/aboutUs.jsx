@@ -33,6 +33,7 @@ export function AboutUs(
       <div id="about-us" className="body1-section">
         <div className="container w-container">
           <div className="body1">
+            <img src="/images/home/Vector_3.svg" loading="lazy" alt className="image-10"/>
             <h1 className="body-heading">{title}</h1>
             <p className="body-paragraph">{description}</p>
           </div>
