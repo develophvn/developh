@@ -14,9 +14,11 @@ function PersonalStatement(
   return (
       <div>
         <p className="paragraph-7">{statement}</p>
-        <div className="div-block-4"><img
-            src={avatar} loading="lazy"
-            width="49" alt={name} className="image-9"/>
+        <div className="div-block-4">
+          <div className="div-block-6"><img
+              src={avatar}
+              loading="lazy" width="49" sizes="48.984375px"
+              alt={name} className="image-9"/></div>
           <div className="div-block-5">
             <p className="paragraph-8">{name}</p>
             <div className="text-block" style={{color: color}}>{position}</div>
