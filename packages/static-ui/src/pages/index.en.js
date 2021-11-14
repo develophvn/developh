@@ -62,7 +62,7 @@ const Data = {
         endDate: "Oct 10 2021",
         link: "#",
         tags: [
-          {title: "Tech", color: "#0669ff"},
+          {title: "Design", color: "#0669ff"},
           {title: "Mentoring Program", color: "#0AB88A"}
         ]
       },
@@ -80,12 +80,12 @@ const Data = {
       {
         image: "/images/home/60cdbad27d6b227c2901ace9_152032347_265495371653576_8386793872028597589_n.jpeg",
         title: "EmPower: Uncovering UX/UI World",
-        startDate: "Mars 07 2021",
+        startDate: "Mar 07 2021",
         endDate: "May 07 2021",
         link: "https://www.facebook.com/events/739583093596043?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D",
         tags: [
-          {title: "Tech", color: "#0669ff"},
-          {title: "Mentoring Program", color: "#0AB88A"}
+          {title: "Design", color: "#0669ff"},
+          {title: "Special Event", color: "#0AB88A"}
         ]
       },
       {
@@ -96,7 +96,7 @@ const Data = {
         link: "https://www.facebook.com/events/1070462483385271/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D",
         tags: [
           {title: "Tech", color: "#0669ff"},
-          {title: "Mentoring Program", color: "#0AB88A"}
+          {title: "Special Event", color: "#0AB88A"}
         ]
       }
     ]
