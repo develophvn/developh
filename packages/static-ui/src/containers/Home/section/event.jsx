@@ -1,5 +1,6 @@
 import React from 'react';
 import * as PropTypes from "prop-types";
+import animation from '../animation.css';
 
 function TagItem({title, color}) {
   return (
@@ -52,12 +53,10 @@ function EventNode(
                 <div className="event-date"><h4 className="heading">End Date</h4>
                   <p className="paragraph-5">{endDate}</p></div>
               </div>
-              <div data-w-id="f9e749c2-a961-eb2e-dcbd-1edd427331f4" className="cta-button-readmore"><a
-                  // style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(231,90,93);background-color:rgb(255,255,255)"
-                  href={link} target="_blank"
-                  className="front-button-readmore w-button">Read More</a><a href={link}
-                                                                             className="back-button-readmore w-button">Register
-                Now</a></div>
+              <div className="cta-button-readmore">
+                <a href={link} target="_blank" className="front-button-readmore w-button">Read More</a>
+                <a href={link} className="back-button-readmore w-button">Register Now</a>
+              </div>
             </div>
           </div>
         </div>

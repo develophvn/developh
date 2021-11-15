@@ -1,194 +1,56 @@
-import React, { useEffect, useMemo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { get, isEmpty, cloneDeep } from "lodash";
-import { useStyletron } from "styletron-react";
-import { useStaticQuery, graphql } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink, faLanguage } from "@fortawesome/free-solid-svg-icons";
-import { ChevronDown, Delete } from "baseui/icon";
-import { FormattedMessage } from "react-intl";
-import Logo from "../static/LogoBlue.svg";
+import LogoBlue from "../static/LogoBlue.svg";
+import LogoWhite from "../static/LogoWhite.svg";
+import {WEBSITE_INFO} from "../config";
+import navbarAnimation from "../styles/navbar-animation"
 
-import { AppNavBar, setItemActive } from "baseui/app-nav-bar";
-import { Link, navigate } from "gatsby";
-import { WEBSITE_INFO } from "../config";
-import languages from "../languages";
+const {leftRoutes, rightRoutes, home} = WEBSITE_INFO;
 
-const LanguageMap = {
-  vi: {
-    label: "🇻🇳 Tiếng Việt",
-  },
-  en: {
-    label: "🇺🇸 English",
-  },
-  default: {
-    label: "Unknown",
-  },
-};
-
-const defaultMainItems = WEBSITE_INFO.routes;
-
-const searchItem = (items, criteriaFn) => {
-  for (const item of items) {
-    if (criteriaFn(item)) {
-      return item;
-    } else if (item.children) {
-      const foundInChildren = searchItem(item.children, criteriaFn);
-      if (foundInChildren) {
-        return foundInChildren;
-      }
-    }
+class NavBar extends React.Component {
+  componentDidMount() {
+    navbarAnimation()
   }
-  return null;
-};
 
-const isItemMatchedURL = (item, url, currentLang) =>
-  item.route &&
-  !item.isLanguageChange &&
-  (item.route === url ||
-    item.route === `${url}/` ||
-    `/${currentLang.langKey}${item.route}` === url ||
-    `/${currentLang.langKey}${item.route}` === `${url}/`);
+  render() {
+    let {title, langsMenu} = this.props;
+    return (
+        <div data-animation="over-right" className="navbar w-nav" data-easing2="ease-in-out" data-easing="ease-in-out"
+             data-collapse="small" data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec527" role="banner" data-duration="300"
+             data-doc-height="1">
+          <div className="container nav w-container"><a href={home.route} className="brand w-nav-brand">
+            <img
+                src={LogoWhite}
+                loading="lazy" style={{opacity: 1}} data-w-id="6d81b76d-6420-928a-864e-57f9dc46de6d" alt
+                className="image"/>
+            <img
+                src={LogoBlue}
+                loading="lazy" style={{opacity: 0}} data-w-id="e44c2661-7e38-5b5d-6ddc-2f72d9ce9c38" alt
+                className="image-7"/></a>
+            <nav role="navigation" className="nav-menu w-nav-menu">
 
-const NavBar = ({ title, langsMenu }) => {
-  const data = useStaticQuery(graphql`
-    query NavBarQuery {
-      allWpPage {
-        nodes {
-          title
-          uri
-        }
-      }
-    }
-  `);
-  const morePages = useMemo(() => get(data, "allWpPage.nodes", []), [data]);
-  const [css] = useStyletron();
-  const url = typeof window !== "undefined" ? window.location.pathname : "";
-  const currentLang = useMemo(() => langsMenu.find((item) => item.selected), [
-    langsMenu,
-  ]);
-  const [mainItems, setMainItems] = React.useState(cloneDeep(defaultMainItems));
-  useEffect(() => {
-    const items = cloneDeep(defaultMainItems);
-    if (!isEmpty(morePages)) {
-      items.push({
-        icon: ChevronDown,
-        label: <FormattedMessage id="moreWordpressPages" />,
-        navExitIcon: Delete,
-        children: morePages
-          .filter((page) =>
-            !currentLang.isDefault
-              ? page.uri.includes(`/${currentLang.langKey}-`)
-              : !languages.langs.some((lang) => page.uri.includes(`/${lang}-`))
-          )
-          .map((page) => ({
-            icon: () => <FontAwesomeIcon icon={faLink} />,
-            label: page.title,
-            route: page.uri,
-          })),
-      });
-    }
-    if (langsMenu.length > 1) {
-      items.push({
-        icon: ChevronDown,
-        label: <FormattedMessage id="selectLanguages" />,
-        navExitIcon: Delete,
-        children: langsMenu.map((item) => ({
-          ...item,
-          icon: () => <FontAwesomeIcon icon={faLanguage} />,
-          label: (LanguageMap[item.langKey] || LanguageMap.default).label,
-          route: item.link,
-          isLanguageChange: true,
-        })),
-      });
-    }
-    setMainItems(() => {
-      const currentItem = searchItem(items, (item) =>
-        isItemMatchedURL(item, url, currentLang)
-      );
-      if (currentItem) {
-        return setItemActive(items, currentItem);
-      }
-      return items;
-    });
-  }, [morePages, langsMenu, currentLang, url]);
-  useEffect(() => {
-    if (url) {
-      setMainItems((prev) => {
-        const currentItem = searchItem(prev, (item) =>
-          isItemMatchedURL(item, url, currentLang)
-        );
-        if (currentItem) {
-          return setItemActive(prev, currentItem);
-        }
-        return prev;
-      });
-    }
-  }, [url, currentLang]);
+              {leftRoutes.map(({label, route}) =>
+                  <a style={{color: "#FFFFFF"}} href={route} key={label} className="nav-button w-nav-link">{label}</a>
+              )}
 
-  if (mainItems.length === defaultMainItems.length) {
-    return null;
+              <div data-w-id="6a193bb3-c766-3b47-ded9-add2226ec613" className="div-block"></div>
+
+              {rightRoutes.map(({label, route}) =>
+
+                  <a style={{color: "#FFFFFF"}} href={route} key={label} className="nav-button w-nav-link">{label}</a>
+              )}
+
+            </nav>
+            <div data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec531" className="menu-button w-nav-button">
+              <div style={{backgroundColor: "#FFFFFF"}} className="hamburgur-bar"></div>
+              <div style={{backgroundColor: "#FFFFFF"}} className="hamburgur-bar"></div>
+              <div style={{backgroundColor: "#FFFFFF"}} className="hamburgur-bar"></div>
+            </div>
+          </div>
+        </div>
+    );
   }
-  return (
-    <AppNavBar
-      overrides={{
-        Root: {
-          style: {
-            position: "sticky",
-            top: 0,
-            zIndex: 50,
-          },
-        },
-        MobileDrawer: {
-          props: {
-            overrides: {
-              Root: {
-                style: {
-                  zIndex: 99,
-                  paddingTop: "5rem",
-                },
-              },
-            },
-          },
-        },
-      }}
-      title={
-        <Link
-          className={css({
-            textDecoration: "none",
-          })}
-          to={currentLang.isDefault ? "/" : `/${currentLang.langKey}/`}
-          replace={false}
-        >
-          <img
-            className={css({ paddingTop: "5px" })}
-            src={Logo}
-            alt="LogoDevelophVN"
-          />
-        </Link>
-      }
-      mainItems={mainItems}
-      onMainItemSelect={(item) => {
-        setMainItems((prev) => setItemActive(prev, item));
-        if (item.route) {
-          if (item.isLanguageChange) {
-            const newRoute = window.location.pathname.replace(
-              /\/[a-z][a-z]\//,
-              "/"
-            );
-            navigate(item.isDefault ? newRoute : `/${item.langKey}${newRoute}`);
-          } else {
-            navigate(
-              currentLang.isDefault
-                ? item.route
-                : `/${currentLang.langKey}${item.route}`
-            );
-          }
-        }
-      }}
-    />
-  );
-};
+}
 
 NavBar.propTypes = {
   title: PropTypes.string,

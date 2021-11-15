@@ -1,24 +1,22 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBlog, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 export const WEBSITE_INFO = {
-  title: "Developh Vietnam",
-  routes: [
+  title: "Developh | Your Tech Career Mentor and Partner",
+  home: {route: "/"},
+  leftRoutes: [
     {
-      label: "Home",
-      route: "/",
-      icon: () => <FontAwesomeIcon icon={faHome} />,
+      label: "About Us",
+      route: "/#about-us"
     },
     {
-      label: "Blogs",
-      route: "/blogs",
-      icon: () => <FontAwesomeIcon icon={faBlog} />,
+      label: "Careers",
+      route: "/#footer"
     },
+  ],
+  rightRoutes: [
     {
-      label: "Contact",
-      route: "/contact",
-      icon: () => <FontAwesomeIcon icon={faPhone} />,
+      label: "Our Blog",
+      route: "/blogs"
     },
   ],
 };
