@@ -948,7 +948,7 @@ body {
 .grid-5 {
   margin-bottom: 120px;
   grid-column-gap: 48px;
-  grid-row-gap: 196px;
+  grid-row-gap: 48px;
   -ms-grid-columns: 408px 408px;
   grid-template-columns: 408px 408px;
 }
