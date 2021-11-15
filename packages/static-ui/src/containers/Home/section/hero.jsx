@@ -36,7 +36,6 @@ export const Hero = (
       </div>
       <div data-w-id="53d04a60-965b-a20e-1afe-742ec45086a1" className="cta-button1"><a
           data-w-id="8bf4ed2a-9d8b-72ad-0d9c-81c97cb51d73"
-          // style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(231,90,93);background-color:rgb(255,255,255)"
           href="https://forms.gle/pTzok9WsndFZDikt7" target="_blank"
           className="front-button1 w-button">Register Now</a>
         <a href="https://forms.gle/pTzok9WsndFZDikt7"

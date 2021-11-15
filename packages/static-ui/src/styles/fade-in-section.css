@@ -1,0 +1,14 @@
+/*add fade in animation for elements in page on scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(170px);
+    visibility: hidden;
+    transition: opacity 0.4s ease-out, transform 0.6s ease-out;
+    will-change: opacity, visibility;
+}
+.fade-in.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+

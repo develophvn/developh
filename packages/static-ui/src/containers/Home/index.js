@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import "./landing_page.css";
+import './animation.css';
+import '../../styles/fade-in-section.css'
 import {Hero} from "./section/hero";
 import {AboutUs} from "./section/aboutUs";
 import {Event} from "./section/event";

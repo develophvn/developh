@@ -1,6 +1,6 @@
 import React from 'react';
 import * as PropTypes from "prop-types";
-import animation from '../animation.css';
+import FadeInSection from "../../../components/fade-in-section";
 
 function TagItem({title, color}) {
   return (
@@ -76,14 +76,20 @@ export function Event(
       <div className="body2-section">
         <div className="container w-container">
           <div className="body2">
-            <h1 className="body-heading body2-heading">{title}</h1><img
-              src="/images/60ceb17ce3936444cb028ed0_also_for_designers!.svg"
-              loading="lazy" alt="" className="image-5"/>
+            <FadeInSection>
+              <h1 className="body-heading body2-heading">{title}</h1>
+            </FadeInSection>
+            <FadeInSection>
+              <img src="/images/60ceb17ce3936444cb028ed0_also_for_designers!.svg"
+                   loading="lazy" alt="" className="image-5"/>
+            </FadeInSection>
           </div>
           <div className="w-layout-grid grid-4">
 
             {events.map((event) =>
-                <EventNode key={event.title} event={event}/>
+                <FadeInSection>
+                  <EventNode key={event.title} event={event}/>
+                </FadeInSection>
             )}
 
           </div>
