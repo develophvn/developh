@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeInSection from "../../../components/fade-in-section";
 
 function PersonalStatement(
     {
@@ -40,11 +41,18 @@ export function Testimonial(
       <div className="body2-section">
         <div className="container w-container">
 
-          <div className="body2"><h1 className="body-heading body2-heading">{title}</h1></div>
+          <div className="body2">
+            <FadeInSection>
+              <h1 className="body-heading body2-heading">{title}</h1>
+            </FadeInSection>
+          </div>
+
           <div className="w-layout-grid grid-5">
-
-            {testimonials.map(testimonial => <PersonalStatement key={testimonial.name} testimonial={testimonial}/>)}
-
+            {testimonials.map(testimonial =>
+                <FadeInSection>
+                  <PersonalStatement key={testimonial.name} testimonial={testimonial}/>
+                </FadeInSection>
+            )}
           </div>
 
         </div>
