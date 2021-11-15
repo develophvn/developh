@@ -15,7 +15,7 @@ export default function FadeInSection(props) {
     return () => observer.unobserve(domRef.current);
   }, []);
   return (
-      <div className={`fade-in ${isVisible ? 'is-visible' : ''}`}
+      <div className={`fade-in${props.type ?? ""} ${isVisible ? 'is-visible' : ''}`}
            ref={domRef}
       >
         {props.children}
