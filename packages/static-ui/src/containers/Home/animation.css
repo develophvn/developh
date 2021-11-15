@@ -1,0 +1,15 @@
+.cta-button-readmore:hover .front-button-readmore {
+  transform: translateY(3px);
+  color: #ffffff;
+  background: #e75a5d;
+  transition: transform 0.2s, color 0.2s, background 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.cta-button-readmore:not(:hover) .front-button-readmore {
+  transform: translateY(0px);
+  color: #e75a5d;
+  background: #ffffff;
+  transition: transform 0.2s, color 0.2s, background 0.2s;
+  transition-timing-function: ease-in-out;
+}
