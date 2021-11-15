@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import startAnimation from "./animation";
 import "./landing_page.css";
 import {Hero} from "./section/hero";
 import {AboutUs} from "./section/aboutUs";
@@ -8,9 +7,6 @@ import {Footer} from "./section/footer";
 import {Testimonial} from "./section/testimonial";
 
 class LandingPage extends Component {
-  componentDidMount = () => {
-    startAnimation()
-  };
 
   render() {
     const {hero, aboutUs, event, testimonial, footer} = this.props.data;
