@@ -5,8 +5,19 @@ const Data = {
   hero: {
     images: {
       bg: {
-        src: "/images/home/611634f1f5543c66e7859c9f_pins_png.png",
-        cover: "/images/home/611630f8828f08fc77012b9a_Web_Cover.png"
+        front: {
+          src: "/images/home/pins.webp",
+          srcset: [
+            {on: "500w", src: "/images/home/pins-500.webp"},
+            {on: "1600w", src: "/images/home/pins-1600.webp"},
+            {on: "2000w", src: "/images/home/pins-2000.webp"},
+            {on: "2455w", src: "/images/home/pins-2455.webp"}
+          ]
+        },
+        cover: [
+          "/images/home/Web_Cover.webp",
+          "/images/home/Web_Cover.webp"
+        ]
       }
     }
   },
@@ -16,37 +27,37 @@ const Data = {
     offers: [
       {
         title: "Developh Class",
-        icon: "/images/60cd6b0f3ce5ae7a78c6bb13_Icon_1.svg",
+        icon: "/images/Icon_1.svg",
         description:
             "An inclusive education platform for anyone aspiring to become coders or designers in the near future.",
       },
       {
         title: "Mentoring Session",
-        icon: "/images/60cd6b107a998880c6c98307_Icon_2.svg",
+        icon: "/images/Icon_2.svg",
         description:
             "Developh mentors are willing to answer your code questions, fix bugs and practice mock interviews with you.",
       },
       {
         title: "TechTalk Series",
-        icon: "/images/60cd6b103e9cf4a2674714be_Icon_3.svg",
+        icon: "/images/Icon_3.svg",
         description:
             "Experts from big corporates are invited to share their personal Tech journeys and orientate your career paths.",
       },
       {
         title: "Outsourcing",
-        icon: "/images/60cd6b0f2b4936135f504e19_Icon_4.svg",
+        icon: "/images/Icon_4.svg",
         description:
             "Developh internal team offer utsourcing services ( web applications ) to other organizations.",
       },
       {
         title: "Hackathon",
-        icon: "/images/60cd6b1008b297b4281edd78_Icon_5.svg",
+        icon: "/images/Icon_5.svg",
         description:
             "A playground of tech enthusiasts to transform ideas into demo products in just 24 to 36 hours.",
       },
       {
         title: "Career Fair",
-        icon: "/images/60cd6b10e3a3100e393d7db3_Icon_6.svg",
+        icon: "/images/Icon_6.svg",
         description:
             "Developh provides suitable working opportunities from trusted companies for students.",
       },
@@ -56,7 +67,7 @@ const Data = {
     title: "Since the foundation, we have organized various events tailored for developers of different levels and interests",
     events: [
       {
-        image: "/images/home/web-wallpaper.png",
+        image: "/images/home/web-wallpaper.webp",
         title: "Design of Things",
         startDate: "Sep 05 2021",
         endDate: "Oct 10 2021",
@@ -67,7 +78,7 @@ const Data = {
         ]
       },
       {
-        image: "/images/home/diy-program-01.png",
+        image: "/images/home/diy-program-01.webp",
         title: "Do it Yourself Program",
         startDate: "Jul 15 2021",
         endDate: "Oct 30 2021",
@@ -78,7 +89,7 @@ const Data = {
         ]
       },
       {
-        image: "/images/home/60cdbad27d6b227c2901ace9_152032347_265495371653576_8386793872028597589_n.jpeg",
+        image: "/images/home/empower.webp",
         title: "EmPower: Uncovering UX/UI World",
         startDate: "Mar 07 2021",
         endDate: "May 07 2021",
@@ -89,7 +100,7 @@ const Data = {
         ]
       },
       {
-        image: "/images/home/60cdbad23fb64cf63f277a2d_124348327_202381101298337_8409323548489703418_n.jpeg",
+        image: "/images/home/unicode.webp",
         title: "Unicode: Into the Tech World",
         startDate: "November 28 2020",
         endDate: "Dev 06 2020",
@@ -104,10 +115,34 @@ const Data = {
   testimonial: {
     title: "...and we has received a lot of support from everyone",
     testimonials: [
-      {avatar: "https://media-exp1.licdn.com/dms/image/C5603AQEviOU7ZCs6Jw/profile-displayphoto-shrink_800_800/0/1623775546830?e=1642032000&v=beta&t=oH5p-MARuiqdkK63CI9Jgt5ua-Ro4t5n1pZCXYmv6XQ", name: "Linh Hanh Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"},
-      {avatar: "https://media-exp1.licdn.com/dms/image/C5603AQEviOU7ZCs6Jw/profile-displayphoto-shrink_800_800/0/1623775546830?e=1642032000&v=beta&t=oH5p-MARuiqdkK63CI9Jgt5ua-Ro4t5n1pZCXYmv6XQ", name: "Thuy Duong Le Nguyen", position: "Mentee @ Design of Things", color: "#FF9502", statement: "I really appreciate that Developh allows everyone to make their own first products and give very detailed feedback!"},
-      {avatar: "https://scontent.fhan3-4.fna.fbcdn.net/v/t1.6435-9/184195593_2888443808074177_2040427941686235851_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=WbVocAcCjyAAX978zp7&_nc_ht=scontent.fhan3-4.fna&oh=b6629a23e000fa3cd2fe9854786c6ebe&oe=61B4746A", name: "Hoang Minh Quan", position: "Mentee @ Do it Yourself Program", color: "#0669FF", statement: "The mentors are very enthusiastic, in addition to the lecture, we also shared more practical experience in the industry. Worth participating!"},
-      {avatar: "https://media-exp1.licdn.com/dms/image/C5603AQEviOU7ZCs6Jw/profile-displayphoto-shrink_800_800/0/1623775546830?e=1642032000&v=beta&t=oH5p-MARuiqdkK63CI9Jgt5ua-Ro4t5n1pZCXYmv6XQ", name: "Hoang Dan Nguyen", position: "Participant @ Unicode: Into the Tech World", color: "#0AB88A", statement: "I received very useful shares, it helps me have a better overview of fullstack development and will definitely be useful in the future!"}
+      {
+        avatar: "/images/home/hanhlinh.webp",
+        name: "Linh Hanh Nguyen",
+        position: "Mentee @ Design of Things",
+        color: "#FF9502",
+        statement: "Awesome! I think this is the best course I have signed up for this year, really learned a lot! I feel like I'm alive!"
+      },
+      {
+        avatar: "/images/home/duong.webp",
+        name: "Thuy Duong Le Nguyen",
+        position: "Mentee @ Design of Things",
+        color: "#FF9502",
+        statement: "I really appreciate that Developh allows everyone to make their own first products and give very detailed feedback!"
+      },
+      {
+        avatar: "/images/home/quan.webp",
+        name: "Hoang Minh Quan",
+        position: "Mentee @ Do it Yourself Program",
+        color: "#0669FF",
+        statement: "The mentors are very enthusiastic, in addition to the lecture, we also shared more practical experience in the industry. Worth participating!"
+      },
+      {
+        avatar: "/images/home/quan.webp",
+        name: "Hoang Doan Nguyen",
+        position: "Participant @ Unicode: Into the Tech World",
+        color: "#0AB88A",
+        statement: "I received very useful shares, it helps me have a better overview of fullstack development and will definitely be useful in the future!"
+      }
     ]
   },
   footer: {
