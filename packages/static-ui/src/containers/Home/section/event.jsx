@@ -80,7 +80,7 @@ export function Event(
               <h1 className="body-heading body2-heading">{title}</h1>
             </FadeInSection>
             <FadeInSection type={1}>
-              <img src="/images/60ceb17ce3936444cb028ed0_also_for_designers!.svg"
+              <img src="/images/also_for_designers!.svg"
                   loading="lazy" alt="" className="image-5"/>
             </FadeInSection>
           </div>
