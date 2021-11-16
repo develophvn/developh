@@ -1488,10 +1488,6 @@ body {
     padding-left: 0px;
   }
 
-  .event-tag {
-    border-width: 3px;
-  }
-
   .grid-2 {
     display: -ms-grid;
     display: grid;

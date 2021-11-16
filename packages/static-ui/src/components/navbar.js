@@ -7,6 +7,21 @@ import navbarAnimation from "../styles/navbar-animation"
 
 const {leftRoutes, rightRoutes, home} = WEBSITE_INFO;
 
+function closeMenuBar() {
+  const menu = document.querySelector('.menu-button.w-nav-button');
+  if (menu.classList.contains('w--open')) {
+    menu.click();
+  }
+}
+
+function fixLogoVisibility() {
+  const menu = document.querySelector('.menu-button.w-nav-button');
+  if (menu.classList.contains('w--open')) {
+    setTimeout(() => {document.documentElement.scrollTop += 1}, 310);
+  }
+}
+
+
 class NavBar extends React.Component {
   componentDidMount() {
     navbarAnimation()
@@ -14,14 +29,6 @@ class NavBar extends React.Component {
 
   render() {
     let {title, langsMenu} = this.props;
-
-    function closeMenuBar() {
-      const menu = document.querySelector('.menu-button.w-nav-button');
-      if (menu.classList.contains('w--open')) {
-        menu.click();
-      }
-    }
-
     return (
         <div data-animation="over-right" className="navbar w-nav" data-easing2="ease-in-out" data-easing="ease-in-out"
              data-collapse="small" data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec527" role="banner" data-duration="300"
@@ -38,7 +45,8 @@ class NavBar extends React.Component {
             <nav role="navigation" className="nav-menu w-nav-menu">
 
               {leftRoutes.map(({label, route}) =>
-                  <a onClick={closeMenuBar} style={{color: "#FFFFFF"}} href={route} key={label} className="nav-button w-nav-link">{label}</a>
+                  <a onClick={closeMenuBar} style={{color: "#FFFFFF"}} href={route} key={label}
+                     className="nav-button w-nav-link">{label}</a>
               )}
 
               <div className="div-block-8">
@@ -46,11 +54,13 @@ class NavBar extends React.Component {
               </div>
 
               {rightRoutes.map(({label, route}) =>
-                  <a onClick={closeMenuBar} style={{color: "#FFFFFF"}} href={route} key={label} className="nav-button w-nav-link">{label}</a>
+                  <a onClick={closeMenuBar} style={{color: "#FFFFFF"}} href={route} key={label}
+                     className="nav-button w-nav-link">{label}</a>
               )}
 
             </nav>
-            <div data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec531" className="menu-button w-nav-button">
+            <div data-w-id="5a5c6bee-12dd-e8e8-8904-eeac984ec531" className="menu-button w-nav-button"
+                 onClick={fixLogoVisibility}>
               <div style={{backgroundColor: "#FFFFFF"}} className="hamburgur-bar"></div>
               <div style={{backgroundColor: "#FFFFFF"}} className="hamburgur-bar"></div>
               <div style={{backgroundColor: "#FFFFFF"}} className="hamburgur-bar"></div>
