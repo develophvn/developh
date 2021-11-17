@@ -137,8 +137,8 @@ const Data = {
         statement: "The mentors are very enthusiastic, in addition to the lecture, we also shared more practical experience in the industry. Worth participating!"
       },
       {
-        avatar: "/images/home/quan.webp",
-        name: "Hoang Doan Nguyen",
+        avatar: "/images/home/thao.webp",
+        name: "Thao Phuong Pham",
         position: "Participant @ Unicode: Into the Tech World",
         color: "#0AB88A",
         statement: "I received very useful shares, it helps me have a better overview of fullstack development and will definitely be useful in the future!"
