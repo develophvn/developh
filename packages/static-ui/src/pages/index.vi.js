@@ -71,7 +71,7 @@ const Data = {
         title: "Design of Things",
         startDate: "Sep 05 2021",
         endDate: "Oct 10 2021",
-        link: "#",
+        link: "https://docs.google.com/document/d/1YFVshgh5u5Xiq5kx374OGcQ-TWI2WBEFiUsww3eq9wQ/edit?usp=sharing",
         tags: [
           {title: "Design", color: "#0669ff"},
           {title: "Mentoring Program", color: "#0AB88A"}
@@ -82,7 +82,7 @@ const Data = {
         title: "Do it Yourself Program",
         startDate: "Jul 15 2021",
         endDate: "Oct 30 2021",
-        link: "https://www.facebook.com/events/2848424778581476/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
+        link: "https://docs.google.com/document/d/1BO7poKLTvQ4fYYJCfLT0rrp1izYtAZjAr9J5_VknRRM/edit?usp=sharing",
         tags: [
           {title: "Tech", color: "#0669ff"},
           {title: "Mentoring Program", color: "#0AB88A"}
