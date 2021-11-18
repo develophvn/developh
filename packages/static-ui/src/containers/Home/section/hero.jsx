@@ -33,7 +33,7 @@ export const Hero = (
           <div className="event-property-hero">
             <div className="event-props">
               <p className="paragraph-3">Student</p>
-              <p className="paragraph-4">10 students</p>
+              <p className="paragraph-4">10 mentees</p>
             </div>
             <div className="event-props">
               <p className="paragraph-3">Class Level</p>
