@@ -102,7 +102,7 @@ const Data = {
       {
         image: "/images/home/unicode.webp",
         title: "Unicode: Into the Tech World",
-        startDate: "November 28 2020",
+        startDate: "Nov 28 2020",
         endDate: "Dev 06 2020",
         link: "https://www.facebook.com/events/1070462483385271/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D",
         tags: [
